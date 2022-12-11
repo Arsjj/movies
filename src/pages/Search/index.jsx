@@ -17,7 +17,7 @@ function Search() {
 
   useEffect(() => {
     dofetch();
-  }, []);
+  }, [id]);
 
   console.log(response, 46416974864864);
 

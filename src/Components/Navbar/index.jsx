@@ -46,7 +46,8 @@ const Navbar = () => {
     }
   };
 
-  function onSearch() {
+  function onSearch(e) {
+    e.preventDefault();
     navigate(`/search/${value}`);
   }
 
@@ -76,7 +77,7 @@ const Navbar = () => {
           <div className="search">
             {show ? (
               <div className="input">
-                <form onSubmit={() => onSearch()}>
+                <form onSubmit={(e) => onSearch(e)}>
                   <input
                     autoFocus
                     type="search"
