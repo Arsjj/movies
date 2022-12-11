@@ -1,0 +1,58 @@
+.profilePictureContainer {
+  display: flex;
+  position: sticky;  
+  top: 70px;
+margin-top: 1px;
+  flex-direction: column;
+
+  .addToFavourite {
+    color: whitesmoke;
+    font-size: 18px;
+    display: flex;
+    align-items:center;
+    transition: transform 500ms;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: 10px;
+    padding: 5px;
+
+    span {
+      margin-right: 1rem;
+      margin-left: 3rem;
+      margin-bottom: 7px;
+    }
+
+    box-icon {
+      margin: 0px;
+    }
+    
+  }
+
+  .addToFavourite:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    // -ms-transform: scale(1.1);
+    transform: scale(1.05);
+    color: rgb(255, 255, 255);
+    // position: relative;
+    z-index: 3;
+
+    
+
+    // text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+
+
+    // background-color: rgb(181, 130, 96);
+    // border-bottom: 1px solid gray;
+    // border-left: 1px solid gray;
+    // border-right: 1px solid gray;
+  }
+
+  .addToFavourite:active {
+    color: wheat;
+
+    box-icon{        
+        fill: white;
+    }
+    // text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  }
+}

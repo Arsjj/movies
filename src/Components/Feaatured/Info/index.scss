@@ -1,0 +1,166 @@
+.backDrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.moreInfo {
+  width: 85%;
+  height: 200px;
+  position: absolute;
+  top: 60px;
+  left: 8%;
+  animation: slide-down 500ms ease-out forwards;
+  z-index: 20;
+
+  .top {
+    position: relative;
+
+    .poster {
+      width: 100%;
+      height: 450px;
+    }
+
+    .action {
+      position: absolute;
+      left: 30px;
+      bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      width: 180px;
+
+      .like {
+        width: 20px;
+        height: 20px;
+        border: 2px solid gray;
+        padding: 5px;
+        border-radius: 50%;
+        color: rgb(248, 244, 244);
+        text-align: center;
+        background-color: gray;
+      }
+    }
+  }
+
+  .itemInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(47, 46, 46);
+    color: white;
+    font-size: 20px;
+    margin-top: -4px;
+    padding-bottom: 25px;
+
+    .left {
+      position: relative;
+      width: 30%;
+      left: 40px;
+
+      span {
+        margin-right: 10px;
+      }
+
+      div {
+        margin-top: 10px;
+      }
+
+      .vote {
+        color: rgb(8, 214, 8);
+        font-weight: 700;
+        margin-right: 10px;
+      }
+
+      .runtime {
+        font-size: 12px;
+      }
+
+      .hd {
+        width: 25px;
+        padding: 0 10px;
+        color: grey;
+        height: 25px;
+        font-size: 18px;
+        border: 2px solid gray;
+        border-radius: 2px;
+      }
+    }
+
+    .right {
+      position: relative;
+      right: 200px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+      width: 150px;
+
+      .genre {
+        color: gray;
+        margin-right: 10px;
+      }
+
+      .nameList {
+        width: 50px;
+        min-height: 40px;
+      }
+
+      div {
+        color: white;
+        font-size: 16px;
+        width: 300px;
+        margin-top: 15px;
+
+        span {
+          margin-right: 5px;
+        }
+        .nameSpan:hover {
+          cursor: pointer;
+          color: rgba(64, 64, 242, 0.968);
+        }
+      }
+    }
+  }
+}
+
+@media all and (orientation: portrait) {
+  .moreInfo{
+    
+
+    .itemInfo {
+      // display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      // left: 5px;
+
+      .left {
+        position: relative;
+        left: 5%;
+        width: 70%;
+      }
+
+      .right {
+        width: 70%;
+        position: relative;
+        left: 5%;
+        right: 0;
+      }
+    }
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

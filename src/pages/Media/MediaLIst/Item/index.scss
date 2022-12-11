@@ -1,0 +1,78 @@
+.li {
+  position: relative;
+  transition: 200ms;
+  cursor: pointer;
+  width: 245px;
+  z-index: 1;
+
+  .title {
+    height: 35px;
+    transition: 1000ms;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+
+
+    span {
+      margin: 3px 5px ;      
+    }
+      
+
+    i {
+      padding-left: 10px;
+      margin-right: 10px;
+    }
+
+    i:hover {
+      color: wheat
+    }
+  }
+  
+
+  .hovered {
+    background: linear-gradient(rgba(31, 25, 15, 0.1), black);
+    position: absolute;
+    bottom: 3px;
+    // background: inherit;
+    // opacity: 0;
+    width: 100%;
+    // z-index: 2;
+    // border-radius: 0 0 10px 10px ;
+    // transform: 2s;
+    // box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+    // -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+    // -moz-box-shadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.75);
+    // transition: width 2s, height 2s, background-color 2s, transform 2s;
+    // transition: opacity 0.3s ease-in 0.4s;
+  }
+}
+
+.li:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.05);
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 3;
+
+  .title{
+    opacity: 1;
+  }
+
+  
+  // opacity: 10;
+// -webkit-transform: translateX(-3px);
+// transform: translateX(-3px);
+}
+
+@media all and (orientation: portrait) {
+  .li {
+    width: 30vw;
+
+    img {
+      width: 100%;
+      
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.genreSelect {
+  // text-align: center;
+  h3 {
+    color: white;
+    margin-bottom: 5px;
+    width: 80px;
+    // height: 200px;
+  }
+
+  .select {
+    position: relative;
+    top: 6px;
+    left: 20px;
+    font-size: 30px;
+    // font-weight: 500;
+  }
+
+  .ge {
+    background-color: rgb(24, 21, 21);
+    color: rgb(236, 231, 224);
+    width: 120px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // font-size: 30px;
+
+    // border: 1px solid rgb(35, 31, 31);
+    padding: 7px;
+    font-size: 15px;
+    // font-weight: 500;
+  }
+  .list {
+    background-color: rgb(24, 21, 21);
+    color: rgb(236, 231, 224);
+    border-left: 1px solid rgb(83, 81, 81);
+    border-right: 1px solid rgb(83, 81, 81);
+    border-top: 1px solid rgb(83, 81, 81);
+    font-size: 15px;
+    transition: height 2s;
+
+    .hov {
+      font-size: 13px;
+      width: 120px;
+      padding-left: 7px;
+      display: flex;
+      align-items: center;
+      span {
+        position: relative;
+        // left: 7px;
+      }
+    }
+
+    .hov:hover {
+      background-color: rgb(54, 144, 229);
+    }
+  }
+}

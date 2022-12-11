@@ -1,0 +1,37 @@
+.buttons {
+  margin-left: 90px;
+  display: flex;
+
+  .btn {
+    width: 50px;
+    height: 30px;
+    margin-left: 2px;
+    border-radius: 2px;
+    border: 1px solid rgba(10, 10, 138, 0.187);
+    background-color: inherit;
+    color: rgba(240, 248, 255, 0.692);
+  }
+
+  .btncurrent {
+    border: 1px solid rgba(10, 10, 138, 0.187);
+    width: 50px;
+    height: 30px;
+    margin-left: 2px;
+    border-radius: 2px;
+    background-color: inherit;
+    color: rgb(84, 84, 88);
+  }
+
+  .btn:hover {
+    color: rgb(84, 84, 88);
+    cursor: pointer;
+  }
+}
+
+@media all and (orientation: portrait){
+  .buttons {
+    width: 50%;
+    height: 50px;
+    margin: 0;
+  }
+}

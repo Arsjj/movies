@@ -1,0 +1,22 @@
+.ul {
+  position: relative;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 15px;
+  grid-column-gap: 1px;
+  z-index: 1;
+  transition: 2s;
+  margin-left: 50px;
+}
+
+@media screen and (orientation: portrait) {
+  .ul {
+    width: 100%;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+    position: relative;
+    left: 5px;
+    
+  }
+}

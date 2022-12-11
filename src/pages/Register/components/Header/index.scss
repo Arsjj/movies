@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 3.5rem;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0.5, 0.5) 30%);
+  height: 3rem;
+
+  .left {
+    img {
+      width: 10.5vw;
+      height: 6.2vh;
+    }
+  }
+
+  .right {
+    select {
+      background-color: rgb(24, 22, 19);
+      color: rgb(235, 232, 232);
+      width: 100px;
+      height: 37px;
+      border-radius: 1px;
+      padding-left: 8px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: red;
+      font-weight: bold;
+      color: rgb(235, 232, 232);
+      width: 80px;
+      height: 35px;
+      border-radius: 5px;
+      border-style: none;
+      padding-left: 12px;
+      cursor: pointer;
+    }
+  }
+}

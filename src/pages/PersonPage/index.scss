@@ -1,0 +1,26 @@
+.personContainer {
+  width: 90%;
+  position: relative;
+  top: 80px;
+  left: 10%;
+  transition: 2s;
+
+  .menu {
+    display: flex;
+  }
+
+  .personInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+    width: 70%;
+
+    .infoMenu {
+      border-left: 2px solid wheat;
+      padding-left: 30px;
+      width: 500px;
+    }
+  }
+}

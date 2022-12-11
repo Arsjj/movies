@@ -1,0 +1,37 @@
+{
+  "movies": [
+    {
+      "name": "Tuxedo",
+      "description": "A hapless chauffeur must take a comatose Secret Agent's place using his special gadget-laden tuxedo.",
+      "year": 2002,
+      "duration": "1h 38m",
+      "poster": "https://occ-0-300-3933.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf_Mjh2D7lr9gG94KWKoto6a6Uf3kIC_Ru7yLYYQlM9Pz0Q2uc7aLi7bfNQyGUcByHJWQSN6a124uSK_-OMeNlDqzyNze2e-n3WX.jpg?r=806",
+      "avatar": "https://musicart.xboxlive.com/6/cf9f01e8-0000-0000-0000-000000000009/504/image.jpg?w=1920&h=1080",
+      "trailer": "https://player.vimeo.com/video/316130032?h=89ad94267e",
+      "id": 1
+    },
+    {
+      "name": "Enola Holmes",
+      "description": "",
+      "year": "",
+      "duration": "",
+      "poster": "",
+      "avatar": "",
+      "trailer": "https://player.vimeo.com/video/455082257?h=89ad94267e",
+      "id": 2
+
+    },
+    {
+      "name": "",
+      "description": "",
+      "year": "",
+      "duration": "",
+      "poster": "",
+      "avatar": "",
+      "trailer": "",
+      "trailer1": "",
+      "id": 3
+    }
+  ]
+  
+}

@@ -1,0 +1,22 @@
+.results {
+    position: relative;
+    left: 100px;
+    top: 50px;
+    color: antiquewhite;
+    // font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 70%;
+
+    .mediaContainer {
+        display: flex;
+        gap: 10px
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+
+}

@@ -1,0 +1,27 @@
+.block5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8vw;
+    background-color: black;
+    color: white;
+    padding: 7vw;
+    height: 350px;
+
+    .blockText {
+        width: 40vw;
+        
+
+        p{
+            width: 35vw;
+        }
+
+
+    }
+
+    img {
+        width: 40vw;
+    }
+
+    
+}

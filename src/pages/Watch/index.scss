@@ -1,0 +1,38 @@
+.watchContainer {
+  height: 570px;
+  z-index: 3;
+
+  .load {
+    color: aliceblue;
+    font-size: 150px;
+  }
+
+  .watch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    border: none;
+    // margin-top: -50px;
+
+    .video {
+      width: 99.7%;
+      height: 100vh;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+    }
+
+    .back {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: black;
+      color: white;
+      z-index: 21;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.playBtn {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 540;
+  // margin-right: 0.5rem;
+  width: 5rem;
+  height: 2rem;
+  // padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+}
+
+.playBtn:hover {
+  background-color: rgb(218, 216, 216);
+  cursor: pointer;
+}
+
+.button {
+  background-color: white;
+  margin-right: 0.5rem;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+
+  &.more {
+    background-color: rgb(157, 152, 152);
+    color: white;
+    margin-left: 7px;
+  }
+
+  &.more:hover {
+    background-color: rgb(133, 130, 130);
+    cursor: pointer;
+  }
+
+  i {
+    margin-right: 0.2rem;
+  }
+}

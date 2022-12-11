@@ -1,0 +1,40 @@
+p {
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+    padding-top: 4vh;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh;
+
+    .field {
+      height: 3.5rem; 
+      width: 33vw;
+      float: left;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      
+    }
+
+    .field::placeholder {
+      padding: 1vw;
+    }
+
+    .field:focus {
+      border: none;
+    }
+
+    .submit {
+      width: 17vw;
+      height: 3.7rem;
+      font-size: 2vw;
+      background-color: red;
+      color: rgb(235, 232, 232);
+      border: none;
+      border-radius: 0 2px 2px 0;
+    }
+  }
