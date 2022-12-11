@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { useRoutes } from 'react-router-dom';
+import { useRoutes, Navigate } from 'react-router-dom';
 import Mainpage from './pages/Register';
 
 
@@ -19,10 +19,10 @@ const routes = [
     path: '',
     element: <Mainpage />
   },
-  //   {
-  //     path: '/users',
-  //     element: <UserPage />
-  //   },
+    {
+      path: 'netflix',
+      element: <Navigate to={"/"}/>
+    },
   {
     path: 'home',
     element: <Home />
