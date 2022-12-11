@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknetflix=self.webpackChunknetflix||[]).push([[497],{497:function(e,n,t){t.r(n);t(791);var i=t(184);n.default=function(){return(0,i.jsx)("div",{children:"MyList"})}}}]);
+//# sourceMappingURL=497.cd07060c.chunk.js.map

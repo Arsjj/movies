@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknetflix=self.webpackChunknetflix||[]).push([[254],{254:function(e,t,n){n.r(t);n(791);var i=n(184);t.default=function(){return(0,i.jsx)("div",{children:(0,i.jsx)("img",{src:"https://sitechecker.pro/wp-content/uploads/2017/12/linkedin-404-page.png",alt:"ooops",style:{width:"70%",backgroundColor:"white",marginLeft:"15%"}})})}}}]);
+//# sourceMappingURL=254.2b26e8f1.chunk.js.map

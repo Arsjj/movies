@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/497.cd07060c.chunk.js","mappings":"iIAQA,UANA,WACE,OACE","sources":["pages/MyList/index.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nfunction MyList() {\r\n  return (\r\n    <div>MyList</div>\r\n  )\r\n}\r\n\r\nexport default MyList"],"names":[],"sourceRoot":""}
