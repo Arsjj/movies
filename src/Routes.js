@@ -21,7 +21,7 @@ const routes = [
   },
     {
       path: 'netflix',
-      element: <Navigate to={"/"}/>
+      element: <Mainpage/>
     },
   {
     path: 'home',
