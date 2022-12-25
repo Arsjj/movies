@@ -13,10 +13,22 @@
 @media screen and (orientation: portrait) {
   .ul {
     width: 100%;
-    grid-template-columns: auto auto;
-    margin-top: 20px;
-    position: relative;
-    left: 5px;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 5px;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+
+    li{
+      width: fit-content;
+      height: fit-content;
+
+      div{
+        img{
+          height: fit-content;
+        }
+      }
+    }
     
   }
 }

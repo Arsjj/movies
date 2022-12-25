@@ -2,9 +2,8 @@ import "./index.scss";
 
 function Block3() {
   return (
-    <div>
       <div className="block3">
-        <div>
+        <div className="imgDiv">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
             alt=""
@@ -17,7 +16,6 @@ function Block3() {
           </p>
         </div>
       </div>
-    </div>
   );
 }
 

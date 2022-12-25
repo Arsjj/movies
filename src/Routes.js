@@ -19,10 +19,10 @@ const routes = [
     path: '',
     element: <Mainpage />
   },
-    {
-      path: 'netflix',
-      element: <Mainpage/>
-    },
+  {
+    path: 'netflix',
+    element: <Navigate to={'/'} />
+  },
   {
     path: 'home',
     element: <Home />

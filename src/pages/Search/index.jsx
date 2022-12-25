@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+
 import "./index.scss";
 
 const imgUrl = "https://image.tmdb.org/t/p/original";
@@ -24,39 +24,41 @@ function Search() {
   return (
     <div className="results">
       <h3>Search results</h3>
-      {response?.results.map((result) => {
-        return (
-          <div
-            className="mediaContainer"
-            key={result.id}
-            onClick={() => {
-              navigate(
-                result.media_type === "movie"
-                  ? `/movies/info/${result.id}`
-                  : result?.media_type === "tv"
-                  ? `/series/info/${result.id}`
-                  : `/person/${result.id}`
-              );
-            }}
-          >
-            <img
-              // width={result.media_type === "movie" ? "" : "320"}
-              height="200"
-              src={
-                imgUrl +
-                (result.media_type === "person"
-                  ? result?.profile_path
-                  : result.poster_path || result.backdrop_path)
-              }
-            />
-            <div>
-              <span>{result?.title || result?.name}</span>{" "}
-              {/* <span>{result?.media_type}</span> */}
-              <p>{result?.vote_average}</p>
+      <div className="mediaBlock">
+        {response?.results.map((result) => {
+          return (
+            <div
+              className="mediaContainer"
+              key={result.id}
+              onClick={() => {
+                navigate(
+                  result.media_type === "movie"
+                    ? `/movies/info/${result.id}`
+                    : result?.media_type === "tv"
+                    ? `/series/info/${result.id}`
+                    : `/person/${result.id}`
+                );
+              }}
+            >
+              <img
+                // width={result.media_type === "movie" ? "" : "320"}
+                height="150"
+                src={
+                  imgUrl +
+                  (result.media_type === "person"
+                    ? result?.profile_path
+                    : result.backdrop_path || result.poster_path)
+                }
+              />
+              <>
+                <span>{result?.title || result?.name}</span>{" "}
+                {/* <span>{result?.media_type}</span> */}
+                {/* <p>{result?.vote_average}</p> */}
+              </>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

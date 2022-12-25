@@ -18,3 +18,36 @@
     width: 90%;
   }
 }
+
+@media all and (orientation: portrait) {
+  .block4{
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    padding: 0;
+    margin: 26px 0 40px 0;
+
+    .left {
+      text-align: center;
+      width: 70%;
+
+
+      h1{
+        font-size: 20px;
+      }
+
+      p{
+        font-size: 15px;
+        padding: 0;
+      }
+
+    }
+
+    .right{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      // align-items: center;
+    }
+  }
+}

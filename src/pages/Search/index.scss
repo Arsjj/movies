@@ -1,22 +1,29 @@
 .results {
-    position: relative;
-    left: 100px;
-    top: 50px;
-    color: antiquewhite;
-    // font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 70%;
+  position: relative;
+  left: 100px;
+  top: 50px;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 70%;
+
+  .mediaBlock {
+    min-height: 350px;
 
     .mediaContainer {
-        display: flex;
-        gap: 10px
+      width: 400px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .mediaContainer:hover {
+      cursor: pointer;
     }
 
     span {
-        font-size: 20px;
+        width: 200px;
+      font-size: 20px;
     }
-
-
+  }
 }

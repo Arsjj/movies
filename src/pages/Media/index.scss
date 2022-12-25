@@ -22,20 +22,32 @@
 
 @media all and (orientation: portrait) {
   .movie {
-    align-items: flex-start;
     width: 100%;
+    margin: 0;
+    padding-top: 200px ;
 
     .genreSelect {
-      // position: static;
-      top: 70px;
-      left: -10px;
-      // margin-bottom: 120px;
+      position: absolute;
+      top: 125px;
+      left: 5%;
       z-index: 3;
+
+      .select{
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        h3{
+          margin: 0;
+          font-size: 20px;
+        }
+      }
     }
 
     .movieList {
-      align-items: flex-start;
-      // width: 500px;
+      justify-content:  center;
+      width: 90%;
       padding: 0;
     }
   }

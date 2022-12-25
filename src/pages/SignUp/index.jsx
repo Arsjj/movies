@@ -23,57 +23,20 @@ function SignUp() {
     console.log(values);
   };
 
-  const { userObj, setLoggedIn, setUserObj } = useContext(AuthContext);
+  const { setLoggedIn } = useContext(AuthContext);
 
   const id = localStorage.getItem("session-id");
   const navigate = useNavigate();
 
-  const [user, userError, userLoading, dofetch] = useFetch1(`
+  const [, , , dofetch] = useFetch1(`
   https://api.themoviedb.org/3/account?api_key=210df5155329bef70be1615bd2091852&session_id=${id}
   `);
-
-  // const [token, , , tokenFetch] = useFetch1(
-  //   "https://api.themoviedb.org/3/authentication/token/new?api_key=210df5155329bef70be1615bd2091852"
-  // );
-
-  // const [login, , , loginFetch] = useFetch1(
-  //   "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=210df5155329bef70be1615bd2091852"
-  // );
-
-  // const [session, , sessionFetch] = useFetch1(
-  //   "https://api.themoviedb.org/3/authentication/session/new?api_key=210df5155329bef70be1615bd2091852"
-  // );
 
   useEffect(() => {
     if (id) {
       dofetch();
-      // setUserObj(user)
     }
   }, [id]);
-
-    // useEffect(() => {
-    //   if (user) {
-    //     setLoggedIn(true);
-    //     setUserObj(user);
-    //   }
-    // }, [user]);
-
-  // function signIn(e) {
-  //   e.preventDefault();
-
-  //   tokenFetch();
-  //   console.log(45);
-  // }
-
-  // useEffect(() => {
-  //   loginFetch("POST", body, headers);
-  // }, [token]);
-
-  // useEffect(() => {
-  //   if (userObj) {
-  //     navigate("/home");
-  //   }
-  // }, [userObj]);
 
   async function signI(e) {
     e.preventDefault();
@@ -109,11 +72,9 @@ function SignUp() {
 
       localStorage.setItem("session-id", sessionRes?.session_id);
       navigate("/home");
-      setLoggedIn(true)
-    } catch(e) {
-      // (err) => {
-        console.log(e);
-      // };
+      setLoggedIn(true);
+    } catch (e) {
+      console.log(e);
     }
   }
 

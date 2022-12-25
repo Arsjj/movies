@@ -1,9 +1,9 @@
-import "./index.scss";
-import { useNavigate, useLocation } from "react-router-dom";
-import Info from "./Info";
 import { useState } from "react";
-import { PlayBtn, InfoBtn } from "../buttons";
+import { useNavigate } from "react-router-dom";
+import Info from "./Info";
 import useMediaType from "../../hooks/useMediaType";
+import { PlayBtn, InfoBtn } from "../buttons";
+import "./index.scss";
 
 const imgUrl = "https://image.tmdb.org/t/p/original";
 

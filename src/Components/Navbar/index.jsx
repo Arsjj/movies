@@ -49,6 +49,7 @@ const Navbar = () => {
   function onSearch(e) {
     e.preventDefault();
     navigate(`/search/${value}`);
+    setShow(false)
   }
 
   return (

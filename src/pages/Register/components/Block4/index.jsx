@@ -2,7 +2,6 @@ import "./index.scss";
 
 function Block4() {
   return (
-    <div>
       <div className="block4">
         <div className="left">
           <h1>Watch everywhere.</h1>
@@ -11,14 +10,13 @@ function Block4() {
             and TV without paying more.
           </p>
         </div>
-        <div>
+        <div className="right">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
             alt=""
           />
         </div>
       </div>
-    </div>
   );
 }
 

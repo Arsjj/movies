@@ -14,8 +14,8 @@ const MovieItem = ({ data }) => {
   return (
     <li className="li" id={data.id} >
       <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        // onMouseEnter={() => setIsHovered(true)}
+        // onMouseLeave={() => setIsHovered(false)}
       >
         <img
           className="img"

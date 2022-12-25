@@ -6,9 +6,9 @@ import Block3 from "./components/Block3";
 import Block4 from "./components/Block4";
 import Block5 from "./components/Block5";
 import ContactUs from "./components/ContactUs";
-import Header from "./components/Header";
 import Questions from "./components/Questions";
 import StartMembership from "./components/StartMembership";
+
 import "./index.scss";
 
 function Mainpage() {

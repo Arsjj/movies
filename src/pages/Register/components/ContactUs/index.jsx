@@ -1,46 +1,5 @@
 import "./index.scss";
 
-// function ContactUs() {
-//   return (
-//     <div className='tableContainer'>
-//       <div className="table">
-//         <table>
-//           <tr>
-//             <th className=''>Questions? Contact us</th>
-//           </tr>
-//           <div id="td2">
-//             <tr>
-//               <td>FAQ</td>
-//               <td>Help Center</td>
-//               <td>Account</td>
-//               <td>Media Center</td>
-//             </tr>
-//             <tr>
-//               <td>Investor Relations</td>
-//               <td>Jobs</td>
-//               <td>Ways to Watch</td>
-//               <td>Terms of Use</td>
-//             </tr>
-//             <tr>
-//               <td>Privacy</td>
-//               <td>Cookie Preferencies</td>
-//               <td>Corporate Information</td>
-//               <td>Contact Us</td>
-//             </tr>
-//             <tr>
-//               <td>Speed Test</td>
-//               <td>Legal Notices</td>
-//               <td>Netflix Originals</td>
-//             </tr>
-//           </div>
-//         </table>
-//       </div>
-//     </div>
-//   );
-// }
-
-// import React from 'react'
-
 function ContactUs() {
   return (
     <div className="table">

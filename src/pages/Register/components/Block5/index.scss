@@ -1,27 +1,56 @@
 .block5 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.8vw;
-    background-color: black;
-    color: white;
-    padding: 7vw;
-    height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8vw;
+  background-color: black;
+  color: white;
+  padding: 7vw;
+  height: 350px;
+
+  .blockText {
+    width: 40vw;
+
+    p {
+      width: 35vw;
+    }
+  }
+
+  img {
+    width: 40vw;
+  }
+}
+
+@media all and (orientation: portrait) {
+  .block5 {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin: 27px 0 30px 0;
 
     .blockText {
-        width: 40vw;
-        
+      width: 70%;
+      text-align: center;
 
-        p{
-            width: 35vw;
-        }
+      h1 {
+        font-size: 20px;
+      }
 
-
+      p {
+        width: 100%;
+        font-size: 15px;
+        padding: 0;
+      }
     }
 
-    img {
-        width: 40vw;
-    }
+    div {
+      width: 80%;
 
-    
+      img {
+        width: 100%;
+        height: fit-content;
+      }
+    }
+  }
 }
