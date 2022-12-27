@@ -54,13 +54,14 @@
   .li {
     // width: 30vw;
     // color: wheat;
+    // height: 100px;
 
     .hovered {
       color: wheat;
-      // background: gray;
+      bottom: 0;
+
       .title {
         opacity: 10;
-        // color: rgb(255, 255, 255);
         color: rgb(179, 175, 175);
         font-size: 14px;
 
@@ -72,9 +73,17 @@
       }
     }
 
-    img {
+    .imgDiv {
       width: 100%;
-      height: fit-content;
+      height: 110px;
+
+      img {
+        
+        width: 100%;
+        height: inherit;
+        // height: fit-content;
+        object-fit: cover;
+      }
     }
   }
 }

@@ -85,7 +85,7 @@ function SignUp() {
           {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" /> */}
         </div>
         <div className="form">
-          <form action="">
+          <form>
             <h1>Sign In</h1>
             <input
               type="emial"

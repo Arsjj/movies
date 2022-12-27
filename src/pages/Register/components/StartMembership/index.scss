@@ -55,7 +55,6 @@ p {
     .form {
       width: 100%;
       margin-top: 0px;
-      // flex-direction: column;
 
       form {
         width: 90%;
@@ -72,6 +71,7 @@ p {
         .submit {
           width: 50%;
           height: 38px;
+          font-size: 15px;
         }
       }
     }

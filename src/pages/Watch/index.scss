@@ -1,6 +1,7 @@
 .watchContainer {
-  height: 570px;
+  height: fit-content;
   z-index: 3;
+  width: 100%;
 
   .load {
     color: aliceblue;
@@ -33,6 +34,18 @@
       background-color: black;
       color: white;
       z-index: 21;
+    }
+  }
+}
+
+@media all and (orientation: portrait) {
+  .watchContainer {
+    height: 100%;
+    .watch {
+      .video {
+        height: 500px;
+        width: 100%;
+      }
     }
   }
 }
