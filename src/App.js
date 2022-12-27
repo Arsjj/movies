@@ -14,12 +14,12 @@ function App() {
   return (
     <Suspense >
       <AuthProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Navbar />
-          <Routes />
-          <Footer />
-        </BrowserRouter>
+        {/* <BrowserRouter> */}
+        <ScrollToTop />
+        <Navbar />
+        <Routes />
+        <Footer />
+        {/* </BrowserRouter> */}
       </AuthProvider>
     </Suspense>
   );
