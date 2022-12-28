@@ -1,25 +1,24 @@
-import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 import { Suspense } from 'react';
 
-import Routes from './Routes';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ScrollToTop from './helpers/ScrollToTop';
 import AuthProvider from './Providers/AuthContext';
+import useMediaType from './hooks/useMediaType';
 
 import './App.scss';
 
 function App() {
+  const watch = useMediaType('watch');
 
   return (
     <Suspense >
       <AuthProvider>
-        {/* <BrowserRouter> */}
         <ScrollToTop />
-        <Navbar />
+        {watch || <Navbar />}
         <Routes />
-        <Footer />
-        {/* </BrowserRouter> */}
+        {watch || <Footer />}
       </AuthProvider>
     </Suspense>
   );

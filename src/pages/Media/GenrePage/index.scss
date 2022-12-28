@@ -19,43 +19,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-bottom: 30px;
   }
+}
 
-  // .buttons {
-  //   margin-left: 90px;
-  //   display: flex;
-  //   justify-content: center;
-  // }
+@media all and (orientation: portrait) {
+  .movie {
+    margin: 0;
+    padding-top: 180px;
 
-  // .button {
-  //   width: 50px;
-  //   height: 30px;
-  //   margin-left: 2px;
-  //   border-radius: 2px;
-  //   border: 1px solid rgba(10, 10, 138, 0.187);
-  //   background-color: inherit;
-  //   color: rgba(240, 248, 255, 0.692);
-  // }
+    .genre {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 130px;
+      height: fit-content;
 
-  // .buttoncurrent {
-  //   border: 1px solid rgba(10, 10, 138, 0.187);
-  //   width: 50px;
-  //   height: 30px;
-  //   margin-left: 2px;
-  //   border-radius: 2px;
-  //   background-color: inherit;
-  //   color:  rgb(84, 84, 88);
+      h3 {
+        margin: 0;
+      }
+    }
 
-  // }
-
-  // .button:hover {
-
-  //     color:  rgb(84, 84, 88);
-  //     cursor: pointer;
-    
-
-  //   // background-color: rgba(183, 181, 179, 0.96);
-  //   // color: rgba(0, 0, 0, 0.584);
-  // }
+    .movieList {
+      width: 90%;
+    }
+  }
 }
