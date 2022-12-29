@@ -1,29 +1,19 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import useFetch1 from "../../hooks/useFetch";
 import { AuthContext } from "../../Providers/AuthContext";
 
 import "./index.scss";
 
-// const body = {
-//   session_id: id,
-// } ;
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [value, setValue] = useState("");
 
   const navigate = useNavigate();
-  // const id = localStorage?.getItem("session-id");
 
   const { userObj, loggedIn, setLoggedIn, setUserObj } =
     useContext(AuthContext);
-  console.log(userObj, loggedIn, 456);
-
-  const [logaut, error, loading, doFetch] = useFetch1(
-    "https://api.themoviedb.org/3/authentication/session?api_key=210df5155329bef70be1615bd2091852"
-  );
 
   const signOut = async () => {
     const res = await fetch(
@@ -42,14 +32,13 @@ const Navbar = () => {
       setLoggedIn(false);
       localStorage.removeItem("session-id");
       setUserObj(null);
-      console.log("out");
     }
   };
 
   function onSearch(e) {
     e.preventDefault();
     navigate(`/search/${value}`);
-    setShow(false)
+    setShow(false);
   }
 
   return (

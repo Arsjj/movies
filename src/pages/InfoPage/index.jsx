@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Featured from "../../Components/Feaatured";
 import { useParams, useLocation } from "react-router-dom";
-import Footer from "../../Components/Footer";
+import Featured from "../../Components/Feaatured";
+
 
 function InfoPage() {
   const [data, setData] = useState();
@@ -27,7 +27,7 @@ function InfoPage() {
 
   return (
     <div>
-      <Featured res={data} />x{" "}
+      <Featured res={data} />x
     </div>
   );
 }

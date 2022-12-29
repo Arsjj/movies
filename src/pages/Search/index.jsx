@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 import "./index.scss";
+const noAvatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLICBu_i2rNNd8l9Zz-DUNSwFXR9xAzCutg&usqp=CAU"
 
 const imgUrl = "https://image.tmdb.org/t/p/original";
 
@@ -40,19 +41,28 @@ function Search() {
                 );
               }}
             >
-              <img
-                // width={result.media_type === "movie" ? "" : "320"}
-                height="150"
-                src={
-                  imgUrl +
-                  (result.media_type === "person"
-                    ? result?.profile_path
-                    : result.backdrop_path || result.poster_path)
-                }
-              />
+              <div className="imgDiv">
+                <img
+                  height="150px"
+                  width="250px"
+                  src={
+                    imgUrl +
+                    (result.media_type === "person"
+                      ? result?.profile_path
+                      : result.backdrop_path || result.poster_path) || noAvatarUrl
+                  }
+                  alt={result?.name}
+                  />
+              </div>
+
               <>
-                <span>{result?.title || result?.name}</span>{" "}
-                {/* <span>{result?.media_type}</span> */}
+                <div className="infoDiv">
+                  <span>{result?.title || result?.name}</span>{" "}
+                  <span className="mediaType">
+                    {result?.media_type[0].toUpperCase() +
+                      result?.media_type.slice(1)}
+                  </span>
+                </div>
                 {/* <p>{result?.vote_average}</p> */}
               </>
             </div>

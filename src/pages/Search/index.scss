@@ -12,18 +12,49 @@
     min-height: 350px;
 
     .mediaContainer {
-      width: 400px;
       display: flex;
-      gap: 10px;
+      margin-bottom: 5px;
+      width: 500px;
+
+      .imgDiv{
+        // min-width: inherit;
+        // position: relative;
+        height: 150px;
+        width: 250px;
+
+        img{
+          object-fit: cover;
+        }
+
+      }
+      
+      .infoDiv{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        width: 350px; 
+        
+        .mediaType{
+          // position: absolute;
+          bottom: 12px;
+          left: 10px;
+          font-size: 12px;
+          font-style: italic;
+          // color: blue;
+          // font-weight: 500;
+          // background-color: aqua;
+        }
+        span{
+          width: 250px;
+          font-size: 20px;
+        }
+      }
     }
 
     .mediaContainer:hover {
       cursor: pointer;
     }
 
-    span {
-        width: 200px;
-      font-size: 20px;
-    }
+    
   }
 }
