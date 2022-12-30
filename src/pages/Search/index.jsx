@@ -24,7 +24,7 @@ function Search() {
 
   return (
     <div className="results">
-      <h3>Search results</h3>
+      <h3>{response?.results.length? "Search results": "No results"}</h3>
       <div className="mediaBlock">
         {response?.results.map((result) => {
           return (
