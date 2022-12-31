@@ -14,6 +14,12 @@
 
   .mediaImage {
     position: relative;
+    width: 100px;
+    margin-right: 2px;
+
+    img {
+      object-fit: cover;
+    }
 
     .mediaType {
       position: absolute;

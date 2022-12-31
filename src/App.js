@@ -1,16 +1,18 @@
-import Routes from './Routes';
 import { Suspense } from 'react';
+import { useLocation } from 'react-router-dom';
 
+import Routes from './Routes';
+import AuthProvider from './Providers/AuthContext';
+import ScrollToTop from './helpers/ScrollToTop';
+import useMediaType from './hooks/useMediaType';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import ScrollToTop from './helpers/ScrollToTop';
-import AuthProvider from './Providers/AuthContext';
-import useMediaType from './hooks/useMediaType';
 
 import './App.scss';
 
 function App() {
   const watch = useMediaType('watch');
+  const register = useLocation().pathname === '/'
 
   return (
     <Suspense >
@@ -18,7 +20,7 @@ function App() {
         <ScrollToTop />
         {watch || <Navbar />}
         <Routes />
-        {watch || <Footer />}
+        {watch || register || <Footer />}
       </AuthProvider>
     </Suspense>
   );

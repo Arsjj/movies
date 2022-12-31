@@ -1,13 +1,10 @@
-import React from "react";
+import './iindex.scss'
 
 function Biography({ data }) {
   return (
-    <div
+    <div className='biography'
       style={{
-        textAlign: "start",
-        width: '40rem',
-        fontSize: "18px",
-        color: "whitesmoke"
+        
       }}
     >
       {data?.biography}

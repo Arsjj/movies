@@ -60,28 +60,23 @@
 
 @media all and (orientation: portrait) {
   .results {
-    // position: relative;
     left: 0;
     top: 120px;
-    // width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     text-align: center;
-    // justify-content: center;
-    // align-items: center;
 
     .mediaBlock {
-      // width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      
       .mediaContainer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // width: 100%;
 
         .imgDiv{
           width: 100%

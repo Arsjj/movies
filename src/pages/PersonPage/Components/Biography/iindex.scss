@@ -1,0 +1,13 @@
+.biography {
+  text-align: start;
+  width: 40rem;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+@media all and (orientation: portrait) {
+  .biography {
+    width: 90%;
+    margin-bottom: 150px;
+  }
+}

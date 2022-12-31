@@ -24,3 +24,37 @@
     }
   }
 }
+
+@media all and (orientation: portrait) {
+  .personContainer {
+    width: 100%;
+    top: 150px;
+    left: 0;
+    min-height: 700px;
+
+    .menu {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .personInfo {
+      align-items: center;
+      width: 100%;
+      margin-left: 0;
+
+      .birthInfo {
+        text-align: center;
+        width: 80%
+      }
+
+      .infoMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-left: 0px;
+        padding-left: 0;
+      }
+    }
+  }
+}

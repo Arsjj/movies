@@ -2,6 +2,10 @@ import "./index.scss";
 import { imgUrl } from "../../../../../Url_s";
 import { useNavigate } from "react-router-dom";
 
+
+const noImgUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLICBu_i2rNNd8l9Zz-DUNSwFXR9xAzCutg&usqp=CAU"
+
+
 function CreaditDataItem({ item }) {
   const navigate = useNavigate();
 
@@ -19,7 +23,7 @@ function CreaditDataItem({ item }) {
         <img
           width="100px"
           height="150px"
-          src={imgUrl + item?.poster_path}
+          src={item?.poster_path? imgUrl + item?.poster_path: noImgUrl}
           alt={item?.title}
         />
         <h4 className="mediaType">

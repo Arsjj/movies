@@ -11,3 +11,16 @@
     border: 2px solid whitesmoke;
   }
 }
+
+@media all and (orientation: portrait) {
+  .imagesContainer {
+    grid-template-columns: auto auto;
+    width: 90%;
+    margin-bottom: 150px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
