@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import GenreList from "./Components/GenreList";
-
 import MediaList from "./MediaLIst";
 import Buttons from "./Components/Button";
 import Loader from "../../Components/Loader";
+import { movieGenresUrl, tvGenresUrl, BASE_URL, API_KEY } from "../../Url_s";
 
 import useFetch from "../../hooks/useFetch";
 import useMediaType from "../../hooks/useMediaType";
@@ -13,33 +13,25 @@ import useMediaType from "../../hooks/useMediaType";
 import "./index.scss";
 
 function Media() {
-  const [genre, setGenre] = useState();
   const [genreId, setGenreId] = useState("");
-
   const { pageId } = useParams();
-
-  const navigate = useNavigate();
   const movie = useMediaType("movie");
+  const navigate = useNavigate();
 
   const url = movie
-    ? `https://api.themoviedb.org/3/discover/movie?api_key=210df5155329bef70be1615bd2091852&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageId}&with_genres=${genreId}&with_watch_monetization_types=flatrate`
-    : `
-  https://api.themoviedb.org/3/discover/tv?api_key=210df5155329bef70be1615bd2091852&language=en-US&sort_by=popularity.desc&page=${pageId}&timezone=America%2FNew_York&with_genres=${genreId}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
+    ? BASE_URL +
+      `/discover/movie?${API_KEY}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageId}&with_genres=${genreId}&with_watch_monetization_types=flatrate`
+    : BASE_URL +
+      `/discover/tv?${API_KEY}&sort_by=popularity.desc&page=${pageId}&timezone=America%2FNew_York&with_genres=${genreId}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
 
-  const genreUrl = movie
-    ? "https://api.themoviedb.org/3/genre/movie/list?api_key=210df5155329bef70be1615bd2091852&language=en-US"
-    : " https://api.themoviedb.org/3/genre/tv/list?api_key=210df5155329bef70be1615bd2091852&language=en-US";
+  const genreUrl = movie ? movieGenresUrl : tvGenresUrl;
 
   const [data, error, loading, dofetch] = useFetch(url);
-
-  useEffect(() => {
-    fetch(genreUrl)
-      .then((res) => res.json())
-      .then((res) => setGenre(res));
-  }, []);
+  const [genreData, , , fetchGenre] = useFetch(genreUrl);
 
   useEffect(() => {
     dofetch();
+    fetchGenre();
   }, [pageId]);
 
   function toLowerCase(str) {
@@ -48,7 +40,6 @@ function Media() {
 
   const onChange = (e) => {
     setGenreId(e.target.value);
-
     navigate(
       movie
         ? `/movies/${toLowerCase(e.target.title)}/${e.target?.id}/1`
@@ -65,7 +56,7 @@ function Media() {
       {data ? (
         <div className="movie">
           <div className="genreSelect">
-            <GenreList onChange={onChange} data={genre} mediaType={movie} />
+            <GenreList onChange={onChange} data={genreData} mediaType={movie} />
           </div>
           {loading || (
             <div className="movieList">

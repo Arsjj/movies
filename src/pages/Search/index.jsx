@@ -1,19 +1,15 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-
+import { imgUrl, noImgUrl } from "../../Url_s";
 import "./index.scss";
-const noAvatarUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLICBu_i2rNNd8l9Zz-DUNSwFXR9xAzCutg&usqp=CAU"
-
-const imgUrl = "https://image.tmdb.org/t/p/original";
 
 function Search() {
   const { id } = useParams();
 
   const navigate = useNavigate();
-  const [response, error, load, dofetch] = useFetch(
-    `https://api.themoviedb.org/3/search/multi?api_key=210df5155329bef70be1615bd2091852&language=en-US&query=${id}&page=1&include_adult=false`,
-    "GET"
+  const [response, , , dofetch] = useFetch(
+    `https://api.themoviedb.org/3/search/multi?api_key=210df5155329bef70be1615bd2091852&language=en-US&query=${id}&page=1&include_adult=false`
   );
 
   useEffect(() => {
@@ -24,7 +20,7 @@ function Search() {
 
   return (
     <div className="results">
-      <h3>{response?.results.length? "Search results": "No results"}</h3>
+      <h3>{response?.results.length ? "Search results" : "No results"}</h3>
       <div className="mediaBlock">
         {response?.results.map((result) => {
           return (
@@ -46,13 +42,17 @@ function Search() {
                   height="150px"
                   width="250px"
                   src={
-                    imgUrl +
-                    (result.media_type === "person"
-                      ? result?.profile_path
-                      : result.backdrop_path || result.poster_path) || noAvatarUrl
+                    result.backdrop_path ||
+                    result.profile_path ||
+                    result.poster_path
+                      ? imgUrl +
+                        (result.media_type === "person"
+                          ? result?.profile_path
+                          : result.backdrop_path || result.poster_path)
+                      : noImgUrl
                   }
                   alt={result?.name}
-                  />
+                />
               </div>
 
               <>

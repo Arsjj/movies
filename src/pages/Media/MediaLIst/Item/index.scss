@@ -1,4 +1,4 @@
-.li {
+.mediaLi {
   position: relative;
   transition: 200ms;
   cursor: pointer;
@@ -31,13 +31,11 @@
     background: linear-gradient(rgba(31, 25, 15, 0.1), black);
     position: absolute;
     bottom: 3px;
-    // background: inherit;
-    // opacity: 0;
     width: 100%;
   }
 }
 
-.li:hover {
+.mediaLi:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.05);
@@ -51,11 +49,7 @@
 }
 
 @media all and (orientation: portrait) {
-  .li {
-    // width: 30vw;
-    // color: wheat;
-    // height: 100px;
-
+  .mediaLi {
     .hovered {
       color: wheat;
       bottom: 0;
@@ -78,10 +72,8 @@
       height: 110px;
 
       img {
-        
         width: 100%;
         height: inherit;
-        // height: fit-content;
         object-fit: cover;
       }
     }

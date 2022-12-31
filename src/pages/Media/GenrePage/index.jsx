@@ -34,11 +34,11 @@ function GenrePage() {
 
   return (
     <div>
-      <div className="movie">
-        <div className="genre">
+      <div className="mediaByGenre">
+        <div className="mediaGenre">
           <h3>{toUpperCase(genre)}</h3>
         </div>
-        {data?<div className="movieList">
+        {data?<div className="mediabyGenreList">
           <MediaList data={data} />
           <Buttons page={data?.page} toPage={toPage} pages={data?.total_pages}/>
         </div>: <Loader />}

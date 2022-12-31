@@ -1,4 +1,4 @@
-.movie {
+.mediaByGenre {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: 70px;
 
-  .genre {
+  .mediaGenre {
     position: fixed;
     top: 55px;
     left: 30px;
@@ -15,7 +15,11 @@
     font-size: 23px;
   }
 
-  .movieList {
+  h3{
+    width: 10rem;
+  }
+
+  .mediaByGenreList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,15 +27,15 @@
 }
 
 @media all and (orientation: portrait) {
-  .movie {
+  .mediaByGenre {
     margin: 0;
-    padding-top: 180px;
+    padding-top: 200px;
 
-    .genre {
+    .mediaGenre {
       position: absolute;
       width: 90%;
       left: 5%;
-      top: 130px;
+      top: 150px;
       height: fit-content;
 
       h3 {
@@ -39,7 +43,7 @@
       }
     }
 
-    .movieList {
+    .mediaByGenreList {
       width: 90%;
     }
   }

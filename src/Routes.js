@@ -96,11 +96,11 @@ const routes = [
   {
     path: 'sign-in/',
     element: <SignUp />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
-  // {
-  //   path: '*',
-  //   element: <NotFound />
-  // }
 ];
 
 const Routes = () => {

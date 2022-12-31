@@ -3,10 +3,10 @@ import { useParams, useLocation } from "react-router-dom";
 
 import Loader from "../../Components/Loader";
 import useFetch from "../../hooks/useFetch";
+import { youtubeUrl, BASE_URL, API_KEY } from "../../Url_s";
 
 import "./index.scss";
 
-const youtubeUrl = "https://www.youtube.com/embed/";
 
 
 function Watch() {
@@ -14,8 +14,8 @@ function Watch() {
   const id = params.id;
 
   let url = useLocation().pathname.includes("movie")
-    ? `https://api.themoviedb.org/3/movie/ ${id}?api_key=210df5155329bef70be1615bd2091852&append_to_response=videos,images`
-    : `https://api.themoviedb.org/3/tv/ ${id}?api_key=210df5155329bef70be1615bd2091852&append_to_response=videos,images,credits`;
+    ? `${BASE_URL}/movie/ ${id}?${API_KEY}&append_to_response=videos`
+    : `${BASE_URL}/tv/ ${id}?${API_KEY}&append_to_response=videos,images,credits`;
 
   const [data, , loading, dofetch] = useFetch(url);
 

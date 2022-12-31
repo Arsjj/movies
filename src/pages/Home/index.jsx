@@ -1,30 +1,30 @@
+import { useState, useLayoutEffect } from "react";
+
 import Featured from "../../Components/Feaatured";
 import List from "../../Components/List";
-import { useState, useEffect, useLayoutEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { url, url2, url3 } from "../../Url_s";
-import useFetch from "../../hooks/useFetch";
-import "./index.scss";
 import Loader from "../../Components/Loader";
+import { popularUrl, nowPlayingUrl, discoverUrl } from "../../Url_s";
+
+import "./index.scss";
 
 const Home = () => {
-  const [list1, setList1] = useState("");
-  const [list2, setList2] = useState("");
-  const [list3, setList3] = useState("");
+  const [list1, setList1] = useState();
+  const [list2, setList2] = useState();
+  const [list3, setList3] = useState();
   const [profile, setProfile] = useState();
 
   useLayoutEffect(() => {
-    fetch(url)
+    fetch(popularUrl)
     .then((res) => res.json())
     .then((data) => setList1(data))
     .catch((err) => console.log("something e=went weong"));
 
-    fetch(url2)
+    fetch(nowPlayingUrl)
       .then((res) => res.json())
       .then((res) => setList2(res))
       .catch((err) => console.log(err));
 
-    fetch(url3)
+    fetch(discoverUrl)
       .then((res) => res.json())
       .then((res) => setList3(res))
       .catch(() => console.log("something e=went weong"));
@@ -42,8 +42,8 @@ const Home = () => {
     );
     const data = await res.json();
     setProfile(data);
-    window.scrollTo(0, 0);
   }
+  
 
   return (
     <>

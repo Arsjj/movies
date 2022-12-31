@@ -1,9 +1,8 @@
-import "./index.scss";
-import { imgUrl } from "../../../../../Url_s";
 import { useNavigate } from "react-router-dom";
+import { imgUrl, noImgUrl } from "../../../../../Url_s";
+import "./index.scss";
 
 
-const noImgUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLICBu_i2rNNd8l9Zz-DUNSwFXR9xAzCutg&usqp=CAU"
 
 
 function CreaditDataItem({ item }) {

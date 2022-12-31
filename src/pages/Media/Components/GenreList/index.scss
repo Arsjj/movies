@@ -1,10 +1,8 @@
 .genreSelect {
-  // text-align: center;
   h3 {
     color: white;
     margin-bottom: 5px;
     width: 80px;
-    // height: 200px;
   }
 
   .select {
@@ -12,7 +10,6 @@
     top: 6px;
     left: 20px;
     font-size: 30px;
-    // font-weight: 500;
   }
 
   .ge {
@@ -23,12 +20,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // font-size: 30px;
-
-    // border: 1px solid rgb(35, 31, 31);
     padding: 7px;
     font-size: 15px;
-    // font-weight: 500;
   }
   .list {
     background-color: rgb(24, 21, 21);
@@ -38,6 +31,7 @@
     border-top: 1px solid rgb(83, 81, 81);
     font-size: 15px;
     transition: height 2s;
+    padding-bottom: 7px;
 
     .hov {
       font-size: 13px;
@@ -47,7 +41,6 @@
       align-items: center;
       span {
         position: relative;
-        // left: 7px;
       }
     }
 
@@ -56,3 +49,4 @@
     }
   }
 }
+

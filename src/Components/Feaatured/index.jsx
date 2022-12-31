@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Info from "./Info";
 import useMediaType from "../../hooks/useMediaType";
 import { PlayBtn, InfoBtn } from "../buttons";
+import { imgUrl } from "../../Url_s";
+
 import "./index.scss";
 
-const imgUrl = "https://image.tmdb.org/t/p/original";
 
 function Featured({ res, type }) {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   const movie = useMediaType('movie')
-  const home = useMediaType('home')
-  
+  const home = useMediaType('home')  
 
   const onPlay = (id) => {
-    navigate(movie || home? `/watch/movie/${id}`: `/watch/serie/${id}`);
+    navigate(movie || home? `/watch/movie/${id}`: `/watch/tv/${id}`);
   };
 
   const onClose = () => {

@@ -1,27 +1,24 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useMediaType from "../../../../hooks/useMediaType";
+import { imgUrl, noImgUrl } from "../../../../Url_s";
 import "./index.scss";
 
-const imgUrl = "https://image.tmdb.org/t/p/w500";
 
 const MovieItem = ({ data }) => {
-  const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate()
   const movie = useMediaType('movie')
   
 
   return (
-    <li className="li" id={data.id} >
+    <li className="mediaLi" id={data.id} >
       <div className="imgDiv"
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
       >
         <img
           className="img"
           width="245"
           height="140"
-          src={imgUrl + data?.backdrop_path} 
+          src={data?.backdrop_path? imgUrl + data?.backdrop_path: noImgUrl} 
           alt={data?.title || data?.name}
           id={data.id}
           onClick={() => {navigate(movie? `/movies/info/${data.id}`: `/series/info/${data.id}`)}}
