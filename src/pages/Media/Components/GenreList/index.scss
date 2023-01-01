@@ -12,7 +12,7 @@
     font-size: 30px;
   }
 
-  .ge {
+  .genreContainer {
     background-color: rgb(24, 21, 21);
     color: rgb(236, 231, 224);
     width: 120px;
@@ -23,7 +23,8 @@
     padding: 7px;
     font-size: 15px;
   }
-  .list {
+  
+  .listContainer {
     background-color: rgb(24, 21, 21);
     color: rgb(236, 231, 224);
     border-left: 1px solid rgb(83, 81, 81);
@@ -33,12 +34,12 @@
     transition: height 2s;
     padding-bottom: 7px;
 
-    .hov {
-      font-size: 13px;
-      width: 120px;
-      padding-left: 7px;
+    .list {
       display: flex;
       align-items: center;
+      padding-left: 7px;
+      width: 120px;
+      // font-size: 13px;
       span {
         position: relative;
       }

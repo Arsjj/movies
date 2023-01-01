@@ -19,11 +19,10 @@
     height: 100%;
 
     .video {
-      width: 99.7%;
-      height: 100vh;
+      width: 100%;
+      height: inherit;
       z-index: 20;
       position: absolute;
-      top: 0;
       border: 0;
     }
 
@@ -43,10 +42,13 @@
 @media all and (orientation: portrait) {
   .watchContainer {
     height: 100%;
-    display: flex;
-    align-items: center;
 
     .watch {
+      top: 120;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .video {
         height: 500px;
         width: 100%;

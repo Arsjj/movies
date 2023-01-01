@@ -11,7 +11,6 @@
     position: fixed;
     top: 38px;
     left: 9px;
-    // height: 700px;
   }
 
   .movieList {
@@ -44,7 +43,11 @@
           font-size: 24px;
         }
 
-        div {
+        .genreContainer {
+          font-size: 20px;
+        }
+
+        .listContainer {
           .list {
             font-size: 20px;
           }
@@ -53,7 +56,6 @@
     }
 
     .movieList {
-      // margin-top: 20px;
       justify-content: center;
       width: 90%;
       padding: 0;

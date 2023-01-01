@@ -23,16 +23,16 @@ function GenreList({ data, onChange,  mediaType }) {
           : null}
       </select> */}
       <div>
-        <div className="ge" onClick={onShow}>
+        <div className="genreContainer" onClick={onShow}>
           <span>Genre</span>
           <i className="bx bx-chevron-down"></i>
         </div>
-        {show? <div className="list">
+        {show? <div className="listContainer">
           {data
             ? data.genres.map((data) => {
                 return (
                   <div
-                    className="hov"
+                    className="list"
                     key={data.id}
                     id={data?.id}
                     title={data?.name}
