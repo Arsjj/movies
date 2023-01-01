@@ -20,7 +20,7 @@
     width: 10rem;
   }
 
-  .mediaByGenreList {
+  .movieList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@
       }
     }
 
-    .mediaByGenreList {
+    .movieList {
       width: 90%;
     }
   }
