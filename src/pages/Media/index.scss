@@ -10,7 +10,7 @@
   .genreSelect {
     position: fixed;
     top: 38px;
-    left: 9px; 
+    left: 9px;
     // height: 700px;
   }
 
@@ -25,31 +25,36 @@
   .movie {
     width: 100%;
     margin: 0;
-    padding-top: 220px ;
+    padding-top: 220px;
 
     .genreSelect {
       position: absolute;
       top: 145px;
       left: 5%;
       z-index: 3;
-      
 
-      .select{
+      .select {
         padding: 0;
         position: relative;
         top: 0;
         left: 0;
 
-        h3{
+        h3 {
           margin: 0;
           font-size: 24px;
+        }
+
+        div {
+          .list {
+            font-size: 20px;
+          }
         }
       }
     }
 
     .movieList {
       // margin-top: 20px;
-      justify-content:  center;
+      justify-content: center;
       width: 90%;
       padding: 0;
     }

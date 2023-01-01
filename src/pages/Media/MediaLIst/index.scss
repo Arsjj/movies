@@ -19,24 +19,22 @@
     margin: 0;
     padding: 0;
 
-    li{
+    li {
       width: 100%;
       height: fit-content;
 
-      div{
-        img{
+      div {
+        img {
           height: fit-content;
         }
       }
     }
-    
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .mediaUl {
     grid-template-columns: auto auto auto;
     margin-left: 100px;
-    
   }
 }
