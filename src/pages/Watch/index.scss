@@ -39,6 +39,7 @@
   }
 }
 
+
 @media all and (orientation: portrait) {
   .watchContainer {
     height: 100%;
@@ -49,6 +50,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       .video {
         height: 500px;
         width: 100%;
