@@ -1,62 +1,60 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 
 import Featured from "../../Components/Feaatured";
 import List from "../../Components/List";
 import Loader from "../../Components/Loader";
-import { popularUrl, nowPlayingUrl, discoverUrl } from "../../Url_s";
+import useFetch from "../../hooks/useFetch";
+import {
+  popularUrl,
+  nowPlayingUrl,
+  discoverUrl,
+  BASE_URL,
+  API_KEY,
+} from "../../Url_s";
 
 import "./index.scss";
 
 const Home = () => {
-  const [list1, setList1] = useState();
-  const [list2, setList2] = useState();
-  const [list3, setList3] = useState();
   const [profile, setProfile] = useState();
 
+  const [list1, , , fetchList] = useFetch(popularUrl);
+  const [list2, , , fetchList2] = useFetch(nowPlayingUrl);
+  const [list3, , , fetchList3] = useFetch(discoverUrl);
+
   useLayoutEffect(() => {
-    fetch(popularUrl)
-    .then((res) => res.json())
-    .then((data) => setList1(data))
-    .catch((err) => console.log("something e=went weong"));
-
-    fetch(nowPlayingUrl)
-      .then((res) => res.json())
-      .then((res) => setList2(res))
-      .catch((err) => console.log(err));
-
-    fetch(discoverUrl)
-      .then((res) => res.json())
-      .then((res) => setList3(res))
-      .catch(() => console.log("something e=went weong"));
+    fetchList();
+    fetchList2();
+    fetchList3();
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (list3) {
-      dofetch(list3.results[Math.round(Math.random() * 20)].id);
+      getMovie(list3?.results[Math.round(Math.random() * 20)].id);
     }
   }, [list3]);
 
-  async function dofetch(id) {
+  async function getMovie(id) {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/ ${id}?api_key=210df5155329bef70be1615bd2091852&append_to_response=videos,images,credits`
+      `${BASE_URL}/movie/ ${id}?${API_KEY}&append_to_response=videos,images,credits`
     );
     const data = await res.json();
     setProfile(data);
+    window.scrollTo(0, 0);
   }
-  
 
   return (
     <>
-      {list1 ? (
+      {list3 ? (
         <div className="home">
           <Featured type={"movie"} res={profile} />
-          <List res={list1} dofetch={dofetch} />
-          <List res={list2} dofetch={dofetch} />
-          <List res={list3} dofetch={dofetch} />
+          {list1 ? <List data={list1} getMovie={getMovie} /> : null}
+          {list2 ? <List data={list2} getMovie={getMovie} /> : null}
+          {list3 ? <List data={list3} getMovie={getMovie} /> : null}
         </div>
       ) : (
         <Loader />
-      )}
+      )
+      }
     </>
   );
 };

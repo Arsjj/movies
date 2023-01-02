@@ -1,9 +1,9 @@
 import "./index.scss";
 import { useState } from "react";
+import { imgUrl } from "../../../Url_s";
 
-const imgUrl = "https://image.tmdb.org/t/p/w500";
 
-function ListItem({ index, img, title, overview, id, dofetch }) {
+function ListItem({ index, img, title, overview, id, getMovie }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -18,21 +18,12 @@ function ListItem({ index, img, title, overview, id, dofetch }) {
       <img src={imgUrl + img} alt="" />
       {isHovered && (
         <>
-          {/* <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/2m1drlOZSDw"
-            title="YouTube video player"
-            // frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe> */}
           <div
             className="hover"
             style={{
               left: isHovered && index * 225 - 5 + index * 2.5,
             }}
-            onClick={(e) => dofetch(e.target.id)}
+            onClick={(e) => getMovie(e.target.id)}
             ids={id}
           >
             <img src={imgUrl + img} id={id} alt="" />

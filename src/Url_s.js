@@ -1,5 +1,5 @@
 export const BASE_URL = "https://api.themoviedb.org/3";
-export const API_KEY = "api_key=210df5155329bef70be1615bd2091852&language=en-US";
+export const API_KEY = "api_key=210df5155329bef70be1615bd2091852";
 
 export const popularUrl = BASE_URL + "/movie/popular?" + API_KEY + "&language=en-US&page=1";
 export const nowPlayingUrl = BASE_URL + "/movie/now_playing?" + API_KEY + "&language=en-US&page=1";

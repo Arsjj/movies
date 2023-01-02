@@ -1,19 +1,20 @@
 p {
   text-align: center;
   color: white;
-  font-size: 1.5vw;
-  padding-top: 4vh;
+  font-size: 20px;
+  margin-top: 9px;
 }
 
 .form {
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: center;
   padding-bottom: 10vh;
+  width: 100%;
 
   .field {
-    height: 3.5rem;
-    width: 33vw;
+    height: 60px;
+    width: 450px;
     float: left;
     border: none;
     border-radius: 2px 0 0 2px;
@@ -28,9 +29,9 @@ p {
   }
 
   .submit {
-    width: 17vw;
-    height: 3.7rem;
-    font-size: 2vw;
+    width: 212px;
+    height: 62px;
+    font-size: 26px;
     background-color: red;
     color: rgb(235, 232, 232);
     border: none;

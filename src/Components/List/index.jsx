@@ -3,7 +3,7 @@ import "./index.scss";
 // import ArrowBackIosNew from '@mui/material/Icon';
 import { useRef, useState } from "react";
 
-function List({ res, dofetch }) {
+function List({ data, getMovie }) {
   const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef();
 
@@ -19,7 +19,6 @@ function List({ res, dofetch }) {
     }
   }
 
-  // console.log(res.results)
 
   return (
     <div className="list">
@@ -30,8 +29,8 @@ function List({ res, dofetch }) {
         </div>
         <div className="container" ref={listRef}>
           
-          {res? res.results.map((item, id) => {
-            return <ListItem dofetch={dofetch} index={id} key={item.id} id={item.id} img={item.backdrop_path} title= {item.title} overview = {item.overview}
+          {data? data.results.map((item, id) => {
+            return <ListItem getMovie={getMovie} index={id} key={item.id} id={item.id} img={item.backdrop_path} title= {item.title} overview = {item.overview}
             />;
           }): <p>Loading</p> }
 

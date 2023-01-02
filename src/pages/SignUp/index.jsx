@@ -1,13 +1,15 @@
-import { useEffect, useState, useContext } from "react";
-import { AuthContext } from "../../Providers/AuthContext";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import useFetch1 from "../../hooks/useFetch";
+import { AuthContext } from "../../Providers/AuthContext";
+import { BASE_URL, API_KEY } from "../../Url_s";
 
 import "./index.scss";
+
 
 const headers = {
   "Content-Type": "application/json",
 };
+
 
 function SignUp() {
   const [values, setValues] = useState({
@@ -28,26 +30,17 @@ function SignUp() {
   const id = localStorage.getItem("session-id");
   const navigate = useNavigate();
 
-  const [, , , dofetch] = useFetch1(`
-  https://api.themoviedb.org/3/account?api_key=210df5155329bef70be1615bd2091852&session_id=${id}
-  `);
 
-  useEffect(() => {
-    if (id) {
-      dofetch();
-    }
-  }, [id]);
-
-  async function signI(e) {
+  async function signIn(e) {
     e.preventDefault();
 
     try {
       const tokenResponse = await fetch(
-        "https://api.themoviedb.org/3/authentication/token/new?api_key=210df5155329bef70be1615bd2091852"
+        `${BASE_URL}/authentication/token/new?${API_KEY}`
       );
       const token = await tokenResponse.json();
       const loginResponse = await fetch(
-        "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=210df5155329bef70be1615bd2091852",
+        `${BASE_URL}/authentication/token/validate_with_login?${API_KEY}`,
         {
           method: "POST",
           headers: headers,
@@ -59,7 +52,7 @@ function SignUp() {
       );
       const loginToken = await loginResponse.json();
       const sessionResponse = await fetch(
-        "https://api.themoviedb.org/3/authentication/session/new?api_key=210df5155329bef70be1615bd2091852",
+        `${BASE_URL}/authentication/session/new?${API_KEY}`,
         {
           method: "POST",
           headers: headers,
@@ -78,12 +71,10 @@ function SignUp() {
     }
   }
 
+
   return (
     <div className="section">
       <div className="cover">
-        <div className="logo">
-          {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" /> */}
-        </div>
         <div className="form">
           <form>
             <h1>Sign In</h1>
@@ -101,7 +92,7 @@ function SignUp() {
             />
             <button
               onClick={(e) => {
-                signI(e);
+                signIn(e);
               }}
             >
               Sign In
