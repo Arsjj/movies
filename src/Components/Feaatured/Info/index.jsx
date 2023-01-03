@@ -1,19 +1,20 @@
 import { useNavigate } from "react-router-dom";
+
 import useMediaType from "../../../hooks/useMediaType";
 import { PlayBtn } from "../../buttons";
+import { imgUrl } from "../../../Url_s";
+
 import "./index.scss";
 
-const imgUrl = "https://image.tmdb.org/t/p/original";
 
 function Info({ data, onClose, type }) {
   const navigate = useNavigate();
   const movie = useMediaType("movie");
   const home = useMediaType("home");
 
-  console.log(type, 456);
 
-  const play = (id) => {
-    navigate(movie || home? `/watch/movie/${id}`: `/watch/tv/${id}`);
+   const play = (id) => {
+    navigate(movie || home ? `/watch/movie/${id}` : `/watch/tv/${id}`);
   };
 
   return (
@@ -27,15 +28,20 @@ function Info({ data, onClose, type }) {
       <>
         <div className="moreInfo">
           <div className="top">
-            <img className="poster" src={imgUrl + data?.backdrop_path} alt={data?.name} />
+            <img
+              className="poster"
+              src={imgUrl + data?.backdrop_path}
+              alt={data?.name}
+            />
             <div className="action">
               <div onClick={() => play(data.id)}>
                 <PlayBtn />
               </div>
               <div className="like">+</div>
               <div className="like">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAYNJREFUWEftl+tNAzEQhCedQCehEqASkkqASqAT6AQ00jma2/ixe06MheI/ke589pfZ3fF6h8nGbjIe/EugOwCvAPai9ieAZwDf0Qj0KkSYDwD8tYMwD1GoXiDCqDIWiiq9RVTqAWKYnmQzqsFQKWR65mbaCnQA8CK7HAHwGUP3Jc/D64c/WEJEFdJgSBgaDgVlDt27pVkmRoGsAgwRw5KGhiupFmKKANmKsgp0h4vkESBbUTZhu8NVAuLCjwVvSfLnqqdlATmfel9s4WSgViFbPbn4l3KD1ZUzyFYOrdazQD+tryth9iibW36VizUgfaegkbyr/b/smjcgkWwqhdSzpsghPZjdVXatpLaOzvOu6EOlarpklVUd/S+qTA30zGRHAzUP4NFAGi7to05uMBpIczHbb48EKnqPni8jgYreUwOyFZDm2obe0RScTdE1Vt7jBdqyqeebavNvQ1a7iXo2a81p3kRyvQ2heBvd0v3VgAjTvMVeqtlqKeN+fwNqSTWdQr/2lGUlUJpHFQAAAABJRU5ErkJggg==" />
+                <i class="bx bx-like"></i>
               </div>
+              <div>{["bond", "njojoi"].join(",")}</div>
             </div>
           </div>
           <div className="itemInfo">
@@ -79,7 +85,7 @@ function Info({ data, onClose, type }) {
               <div>
                 <span className="genre">Cast:</span>
                 <span>
-                  {data?.credits.cast.slice(0, 10).map((credit, id) => {
+                  {data?.credits.cast.slice(0, 10).map((credit, id, arr) => {
                     return (
                       <span
                         className="nameSpan"
@@ -87,7 +93,7 @@ function Info({ data, onClose, type }) {
                         id={credit.id}
                         onClick={(e) => navigate(`/person/${e.target.id}`)}
                       >
-                        {id > 8 ? credit.name : `${credit.name}` + ","}
+                        {id === arr.length - 1 ? credit.name : `${credit.name},`}
                       </span>
                     );
                   })}

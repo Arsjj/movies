@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useMediaType from "../../../../hooks/useMediaType";
 import { imgUrl, noImgUrl } from "../../../../Url_s";

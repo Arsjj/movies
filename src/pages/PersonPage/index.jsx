@@ -7,8 +7,9 @@ import Pictures from "./Components/Pictures";
 import ProfilePicture from "./Components/ProfilePicture";
 import InfoMenu from "./Components/InfoMenu/InfoMenu";
 import PersonalInfo from "./Components/PersonalInfo";
-
 import useFetch from "../../hooks/useFetch";
+import { API_KEY } from "../../Url_s";
+
 import "./index.scss";
 
 const menu = () => {
@@ -24,13 +25,15 @@ function PersonPage() {
   const [biography, cast, pictures] = info;
   const { id } = useParams();
 
-  const persoUrl = `https://api.themoviedb.org/3/person/${id}?api_key=210df5155329bef70be1615bd2091852&language=en-US`;
-  const creditsUrl = `https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=210df5155329bef70be1615bd2091852&language=en-US`;
-  const imagesUrl = `https://api.themoviedb.org/3/person/${id}/images?api_key=210df5155329bef70be1615bd2091852`;
-
-  const [personData, , , fetchPersonData] = useFetch(persoUrl);
-  const [creditsData, , , fetchCredits] = useFetch(creditsUrl);
-  const [imagesData, , , fetchImages] = useFetch(imagesUrl);
+  const [personData, , , fetchPersonData] = useFetch(
+    `/person/${id}?${API_KEY}&language=en-US`
+  );
+  const [creditsData, , , fetchCredits] = useFetch(
+    `/person/${id}/combined_credits?${API_KEY}&language=en-US`
+  );
+  const [imagesData, , , fetchImages] = useFetch(
+    `/person/${id}/images?${API_KEY}`
+  );
 
   useEffect(() => {
     fetchPersonData();

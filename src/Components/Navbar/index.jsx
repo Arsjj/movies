@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="container">
         <div className="left">
           <Link className="llink" to={loggedIn ? "home" : "/"}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="Netflix"/>
           </Link>
           <Link to="/home" className="link">
             Homepage
@@ -99,7 +99,7 @@ const Navbar = () => {
                 <div className="options">
                   <span>{userObj?.name}</span>
                   <span>Settings</span>
-                  <span onClick={signOut}>Logout</span>
+                  <span onClick={signOut}>Sign out</span>
                 </div>
               </div>
             </>

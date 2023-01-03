@@ -1,7 +1,6 @@
+import { useRef, useState } from "react";
 import ListItem from "./ListItem";
 import "./index.scss";
-// import ArrowBackIosNew from '@mui/material/Icon';
-import { useRef, useState } from "react";
 
 function List({ data, getMovie }) {
   const [slideNumber, setSlideNumber] = useState(0);

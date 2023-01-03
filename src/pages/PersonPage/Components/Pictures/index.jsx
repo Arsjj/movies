@@ -16,7 +16,6 @@ function Pictures({ data }) {
     setShow(false);
   };
 
-  console.log(data);
   return (
     <div className="imagesContainer">
       {data?.profiles.map((item, id) => {

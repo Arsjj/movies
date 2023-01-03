@@ -11,7 +11,6 @@ import StartMembership from "./components/StartMembership";
 
 import "./index.scss";
 
-import { useLocation } from "react-router-dom";
 
 function Mainpage() {
   const [values, setValues] = useState({

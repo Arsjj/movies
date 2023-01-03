@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function PersonalInfo({ data }) {
   return (
     <>
@@ -8,7 +6,7 @@ function PersonalInfo({ data }) {
         <span className="birthInfo">
           Born: {data?.birthday}
           {data?.place_of_birth? (
-            <spann> in {data?.place_of_birth}</spann>
+            <span> in {data?.place_of_birth}</span>
           ) : null}
         </span>
       ) : null}

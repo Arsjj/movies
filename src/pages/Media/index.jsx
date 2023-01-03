@@ -5,7 +5,7 @@ import GenreList from "./Components/GenreList";
 import MediaList from "./MediaLIst";
 import Buttons from "./Components/Button";
 import Loader from "../../Components/Loader";
-import { movieGenresUrl, tvGenresUrl, BASE_URL, API_KEY } from "../../Url_s";
+import { movieGenresUrl, tvGenresUrl, API_KEY } from "../../Url_s";
 
 import useFetch from "../../hooks/useFetch";
 import useMediaType from "../../hooks/useMediaType";
@@ -19,20 +19,19 @@ function Media() {
   const navigate = useNavigate();
 
   const url = movie
-    ? BASE_URL +
-      `/discover/movie?${API_KEY}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageId}&with_genres=${genreId}&with_watch_monetization_types=flatrate`
-    : BASE_URL +
-      `/discover/tv?${API_KEY}&sort_by=popularity.desc&page=${pageId}&timezone=America%2FNew_York&with_genres=${genreId}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
+    ? `/discover/movie?${API_KEY}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageId}&with_genres=${genreId}&with_watch_monetization_types=flatrate`
+    : `/discover/tv?${API_KEY}&sort_by=popularity.desc&page=${pageId}&timezone=America%2FNew_York&with_genres=${genreId}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
 
   const genreUrl = movie ? movieGenresUrl : tvGenresUrl;
 
-  const [data, error, loading, dofetch] = useFetch(url);
+  const [data, , loading, dofetch] = useFetch(url);
   const [genreData, , , fetchGenre] = useFetch(genreUrl);
 
   useEffect(() => {
     dofetch();
     fetchGenre();
   }, [pageId]);
+  
 
   function toLowerCase(str) {
     return str[0].toLowerCase() + str.slice(1);

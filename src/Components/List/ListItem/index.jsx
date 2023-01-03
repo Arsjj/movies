@@ -1,6 +1,6 @@
-import "./index.scss";
 import { useState } from "react";
 import { imgUrl } from "../../../Url_s";
+import "./index.scss";
 
 
 function ListItem({ index, img, title, overview, id, getMovie }) {

@@ -1,5 +1,8 @@
 import { createContext, useEffect, useState } from "react";
-import useFetch1 from "../../hooks/useFetch";
+import Loader from "../../Components/Loader";
+import useFetch from "../../hooks/useFetch";
+import { API_KEY } from "../../Url_s";
+
 
 export const AuthContext = createContext();
 
@@ -9,8 +12,7 @@ const AuthProvider = ({ children }) => {
 
   const id = localStorage?.getItem("session-id");
 
-  const [user, userError, userLoading, getUser] = useFetch1(`
-  https://api.themoviedb.org/3/account?api_key=210df5155329bef70be1615bd2091852&session_id=${id}
+  const [user, ,loading , getUser] = useFetch(`/account?${API_KEY}&session_id=${id}
   `);
   
 
@@ -38,7 +40,7 @@ const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{ userObj, loggedIn, setLoggedIn, setUserObj }}
     >
-      {children}
+      {loading? <Loader/>: children}
     </AuthContext.Provider>
   );
 };

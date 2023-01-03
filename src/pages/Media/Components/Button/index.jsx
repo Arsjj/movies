@@ -1,8 +1,6 @@
 import "./index.scss";
 
 function Buttons({ page, toPage, pages }) {
-  pages?console.log(pages, 7456): console.log(789545)
-
   const buttons = [];
   for(let i = 1; i < pages; i++) {
     buttons.push(i)
@@ -11,8 +9,6 @@ function Buttons({ page, toPage, pages }) {
     }
   }
   
-  
-  console.log(buttons, 745645);
 
   return (
     <div className="buttons">
