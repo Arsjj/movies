@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/netflix/static/css/main.6c294387.css",
-    "main.js": "/netflix/static/js/main.920ef3c5.js",
+    "main.css": "/netflix/static/css/main.4fb3e17f.css",
+    "main.js": "/netflix/static/js/main.a57ffbb2.js",
     "static/css/392.c9cd1638.chunk.css": "/netflix/static/css/392.c9cd1638.chunk.css",
     "static/js/392.54968ac1.chunk.js": "/netflix/static/js/392.54968ac1.chunk.js",
     "static/css/554.b181f212.chunk.css": "/netflix/static/css/554.b181f212.chunk.css",
@@ -11,7 +11,7 @@
     "static/js/497.cd07060c.chunk.js": "/netflix/static/js/497.cd07060c.chunk.js",
     "static/css/822.95b71cc2.chunk.css": "/netflix/static/css/822.95b71cc2.chunk.css",
     "static/js/822.03db0975.chunk.js": "/netflix/static/js/822.03db0975.chunk.js",
-    "static/css/230.77ee8b8e.chunk.css": "/netflix/static/css/230.77ee8b8e.chunk.css",
+    "static/css/230.ff33be1c.chunk.css": "/netflix/static/css/230.ff33be1c.chunk.css",
     "static/js/230.98efb5ad.chunk.js": "/netflix/static/js/230.98efb5ad.chunk.js",
     "static/css/679.e4a51369.chunk.css": "/netflix/static/css/679.e4a51369.chunk.css",
     "static/js/679.78286a6a.chunk.js": "/netflix/static/js/679.78286a6a.chunk.js",
@@ -22,8 +22,8 @@
     "static/js/265.d162154b.chunk.js": "/netflix/static/js/265.d162154b.chunk.js",
     "static/js/787.0904c1f0.chunk.js": "/netflix/static/js/787.0904c1f0.chunk.js",
     "index.html": "/netflix/index.html",
-    "main.6c294387.css.map": "/netflix/static/css/main.6c294387.css.map",
-    "main.920ef3c5.js.map": "/netflix/static/js/main.920ef3c5.js.map",
+    "main.4fb3e17f.css.map": "/netflix/static/css/main.4fb3e17f.css.map",
+    "main.a57ffbb2.js.map": "/netflix/static/js/main.a57ffbb2.js.map",
     "392.c9cd1638.chunk.css.map": "/netflix/static/css/392.c9cd1638.chunk.css.map",
     "392.54968ac1.chunk.js.map": "/netflix/static/js/392.54968ac1.chunk.js.map",
     "554.b181f212.chunk.css.map": "/netflix/static/css/554.b181f212.chunk.css.map",
@@ -33,7 +33,7 @@
     "497.cd07060c.chunk.js.map": "/netflix/static/js/497.cd07060c.chunk.js.map",
     "822.95b71cc2.chunk.css.map": "/netflix/static/css/822.95b71cc2.chunk.css.map",
     "822.03db0975.chunk.js.map": "/netflix/static/js/822.03db0975.chunk.js.map",
-    "230.77ee8b8e.chunk.css.map": "/netflix/static/css/230.77ee8b8e.chunk.css.map",
+    "230.ff33be1c.chunk.css.map": "/netflix/static/css/230.ff33be1c.chunk.css.map",
     "230.98efb5ad.chunk.js.map": "/netflix/static/js/230.98efb5ad.chunk.js.map",
     "679.e4a51369.chunk.css.map": "/netflix/static/css/679.e4a51369.chunk.css.map",
     "679.78286a6a.chunk.js.map": "/netflix/static/js/679.78286a6a.chunk.js.map",
@@ -45,7 +45,7 @@
     "787.0904c1f0.chunk.js.map": "/netflix/static/js/787.0904c1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c294387.css",
-    "static/js/main.920ef3c5.js"
+    "static/css/main.4fb3e17f.css",
+    "static/js/main.a57ffbb2.js"
   ]
 }
