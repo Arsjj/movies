@@ -22,7 +22,7 @@ function Slider({ data, onClose, index, setIndex }) {
   };
 
   return (
-    <dic className="slider">
+    <div className="slider">
       <div className="slideBackDrop" onClick={() => onClose()}></div>
       <div className="slideshow">
         <img className="mainImg" src={imgs[index]} alt=""/>
@@ -31,7 +31,7 @@ function Slider({ data, onClose, index, setIndex }) {
           <button onClick={next}>👉</button>
         </div>
       </div>
-    </dic>
+    </div>
   );
 }
 

@@ -19,9 +19,7 @@
     top: 7%;
     left: 30%;
     z-index: 3;
-    img {
-      border: 1px solide green;
-    }
+    
 
     .actions {
       position: absolute;
@@ -63,10 +61,13 @@
 
 @media all and (orientation: portrait) {
   .slider {
+    
     .slideshow {
-      width: 90%;
-      top: 5;
-      left: 5%;
+      width: 100%;
+      // height: 100%;
+      // align-items: center;
+      top: 10;
+      left: 0;
 
       .actions button {
         background: none;

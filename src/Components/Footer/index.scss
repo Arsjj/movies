@@ -1,13 +1,13 @@
 .main {
   position: relative;
   margin-top: 160px;
+  width: 100%;
   bottom: 0;
 
   .ulContainer {
     position: relative;
-    left: 10%;
+    left: 12%;
     width: 80%;
-
     display: block;
     list-style-type: none;
     margin-block-start: 1em;
@@ -49,5 +49,7 @@
   .main{
     margin: 0;
     width: 100%;
+
+    
   }
 }

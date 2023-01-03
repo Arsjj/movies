@@ -6,14 +6,14 @@ import { imgUrl } from "../../../Url_s";
 
 import "./index.scss";
 
-
 function Info({ data, onClose, type }) {
   const navigate = useNavigate();
   const movie = useMediaType("movie");
   const home = useMediaType("home");
 
+  console.log(data);
 
-   const play = (id) => {
+  const play = (id) => {
     navigate(movie || home ? `/watch/movie/${id}` : `/watch/tv/${id}`);
   };
 
@@ -41,7 +41,6 @@ function Info({ data, onClose, type }) {
               <div className="like">
                 <i class="bx bx-like"></i>
               </div>
-              <div>{["bond", "njojoi"].join(",")}</div>
             </div>
           </div>
           <div className="itemInfo">
@@ -52,12 +51,14 @@ function Info({ data, onClose, type }) {
                 {movie || type
                   ? data?.release_date.slice(0, 4)
                   : data?.first_air_date.slice(0, 4) +
+                    "-" +
                     data?.last_air_date.slice(0, 4)}
               </span>
 
               <span>
-                {movie || type ? data?.runtime : null}
-                <span className="runtime">min</span>{" "}
+                {movie || type ? (
+                  <span className="runtime">{data?.runtime} min</span>
+                ) : null}
               </span>
               <span className="hd">HD</span>
               <div>{data?.origin_countr}</div>
@@ -65,8 +66,11 @@ function Info({ data, onClose, type }) {
                 {movie || type
                   ? ""
                   : data?.number_of_seasons +
+                    " " +
                     "seasons" +
+                    " " +
                     data?.number_of_episodes +
+                    " " +
                     "episodes"}
               </div>
               <div>
@@ -83,21 +87,31 @@ function Info({ data, onClose, type }) {
                 </span>
               </div>
               <div>
-                <span className="genre">Cast:</span>
-                <span>
-                  {data?.credits.cast.slice(0, 10).map((credit, id, arr) => {
-                    return (
-                      <span
-                        className="nameSpan"
-                        key={credit.name}
-                        id={credit.id}
-                        onClick={(e) => navigate(`/person/${e.target.id}`)}
-                      >
-                        {id === arr.length - 1 ? credit.name : `${credit.name},`}
-                      </span>
-                    );
-                  })}
-                </span>
+                {data?.credits.cast.length ? (
+                  <>
+                    <span className="genre">Cast:</span>
+                    <span>
+                      {data?.credits.cast
+                        .slice(0, 10)
+                        .map((credit, id, arr) => {
+                          return (
+                            <span
+                              className="nameSpan"
+                              key={credit.name}
+                              id={credit.id}
+                              onClick={(e) =>
+                                navigate(`/person/${e.target.id}`)
+                              }
+                            >
+                              {id === arr.length - 1
+                                ? credit.name
+                                : `${credit.name},`}
+                            </span>
+                          );
+                        })}
+                    </span>
+                  </>
+                ) : null}
               </div>
             </div>
           </div>
