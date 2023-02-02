@@ -39,7 +39,6 @@ function GenrePage() {
   }
 
   return (
-    <div>
       <div className="mediaByGenre">
         <div className="mediaGenre">
           <h3>{toUpperCase(genre)}</h3>
@@ -57,7 +56,6 @@ function GenrePage() {
           <Loader />
         )}
       </div>
-    </div>
   );
 }
 

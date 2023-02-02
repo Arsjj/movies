@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { useRoutes, Navigate } from 'react-router-dom';
-import Mainpage from './pages/Register';
 
 
 const Home = lazy(() => import('./pages/Home'));
@@ -9,6 +8,7 @@ const Watch = lazy(() => import('./pages/Watch'));
 const MyList = lazy(() => import('./pages/MyList'));
 const Search = lazy(() => import('./pages/Search'));
 const SignUp = lazy(() => import('./pages/SignUp'));
+const MainPage = lazy(() => import('./pages/Register'))
 const InfoPage = lazy(() => import('./pages/InfoPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const GenrePage = lazy(() => import('./pages/Media/GenrePage'));
@@ -17,7 +17,7 @@ const PersonPage = lazy(() => import('./pages/PersonPage'));
 const routes = [
   {
     path: '',
-    element: <Mainpage />
+    element: <MainPage />
   },
   {
     path: 'netflix',
@@ -69,8 +69,17 @@ const routes = [
     ]
   },
   {
-    path: 'search/:id',
-    element: <Search />
+    path: 'search/',
+    children: [
+      {
+        path: " ",
+        element: <Search />
+      },
+      {
+        path: ":id",
+        element: <Search />
+      }
+    ]
   },
   {
     path: 'mylist',

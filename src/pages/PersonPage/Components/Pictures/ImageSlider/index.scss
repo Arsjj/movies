@@ -1,5 +1,7 @@
 .slider {
   transition: all 300ms;
+  position: fixed;
+  // height: 100%;
 
   .slideBackDrop {
     width: 100%;
@@ -8,6 +10,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
   }
 
   .slideshow {

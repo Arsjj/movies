@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { imgUrl } from "../../../../Url_s";
+import { useEffect, useState } from "react";
 import Slider from "./ImageSlider";
+import { imgUrl } from "../../../../Url_s";
+
 import "./index.scss";
 
 function Pictures({ data }) {
@@ -15,6 +16,17 @@ function Pictures({ data }) {
   const onClose = () => {
     setShow(false);
   };
+  
+  const navbar = document.querySelector('.navbar')
+  const main = document.querySelector('.main');
+
+  useEffect(() => {
+    navbar.style.position = show? "absolute": "fixed"
+    main.style.display = show? "none": ""
+  }, [show])
+
+
+  
 
   return (
     <div className="imagesContainer">

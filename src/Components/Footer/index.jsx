@@ -2,9 +2,7 @@ import "./index.scss";
 
 function Footer() {
   return (
-    <div className="main">
-      
-
+    <div className="main">   
       <ul className="ulContainer">
       <div className="icons">
         <i className="bx bxl-youtube" style={{ color: "#f0e9e9" }}></i>

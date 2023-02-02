@@ -22,8 +22,17 @@
     justify-content: space-between;
     padding: 7px;
     font-size: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active{
+      // background-color: rgba(51, 51, 51, 0.16);
+      // background: linear-gradient(rgb(24, 21, 21), rgb(52, 51, 51));
+    }
   }
-  
+
   .listContainer {
     background-color: rgb(24, 21, 21);
     color: rgb(236, 231, 224);
@@ -38,10 +47,30 @@
       display: flex;
       align-items: center;
       padding-left: 7px;
+      padding-right: 7px;
+      
       margin-top: 0;
-      width: 120px;
+      margin-right: 0;
+      width: 118px;
       font-size: 14px;
-      transition: 2s;
+      animation-name: list;
+      animation-duration: 0.2s;
+
+      @keyframes list {
+        from {
+          opacity: 0.1;
+        };
+        to {
+          opacity: 1;
+        }
+      }
+        
+      
+      &:hover {
+        background: rgb(75, 130, 250);
+        cursor: pointer;
+      }
+    }
 
       span {
         position: relative;
@@ -52,5 +81,4 @@
       background-color: rgb(54, 144, 229);
     }
   }
-}
 

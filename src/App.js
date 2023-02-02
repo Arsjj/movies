@@ -13,6 +13,7 @@ import './App.scss';
 function App() {
   const watch = useMediaType('watch');
   const register = useLocation().pathname === '/'
+  
 
   return (
     <Suspense >
