@@ -2,22 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.8vw;
   background-color: black;
   color: white;
-  padding: 7vw;
-  height: 350px;
+  padding: 40px;
+  font-size: 1.5rem;
+  min-height: 350px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 
   .blockText {
-    width: 40vw;
+    padding-right: 50px;
+    // width: 40vw;
 
     p {
-      width: 35vw;
+      max-width: 500px;
+      text-align: left;
     }
   }
 
   img {
-    width: 40vw;
+    width: 700px;
   }
 }
 
