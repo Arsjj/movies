@@ -3,7 +3,6 @@ import "./index.scss";
 
 function Slider({ data, onClose, index, setIndex }) {
   const imgs = data?.profiles.map((item) => imgUrl + item?.file_path);
-  console.log(data)
 
   const next = () => {
     if (index === imgs.length - 1) {
@@ -25,11 +24,13 @@ function Slider({ data, onClose, index, setIndex }) {
     <div className="slider">
       <div className="slideBackDrop" onClick={() => onClose()}></div>
       <div className="slideshow">
-        <img className="mainImg" src={imgs[index]} alt=""/>
-        <div className="actions">
-          <button onClick={prev}>👈</button>
-          <button onClick={next}>👉</button>
-        </div>
+        <button className="action-button left" onClick={prev}>
+          👈
+        </button>
+        <img className="mainImg" src={imgs[index]} alt="" />
+        <button className="action-button right" onClick={next}>
+          👉
+        </button>
       </div>
     </div>
   );

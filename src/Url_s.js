@@ -11,7 +11,8 @@ export const movieGenresUrl = `/genre/movie/list?${API_KEY}&language=en-US`;
 export const tvGenresUrl = `/genre/tv/list?${API_KEY}&language=en-US`;
 
 
-export const imgUrl = "https://image.tmdb.org/t/p/original";
+export const imgUrl = "https://image.tmdb.org/t/p/w500";
+export const originalImgUrl = "https://image.tmdb.org/t/p/original";
 export const noImgUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLICBu_i2rNNd8l9Zz-DUNSwFXR9xAzCutg&usqp=CAU"
 export const youtubeUrl = "https://www.youtube.com/embed/";
 

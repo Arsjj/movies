@@ -11,8 +11,6 @@ function Info({ data, onClose, type }) {
   const movie = useMediaType("movie");
   const home = useMediaType("home");
 
-  console.log(data);
-
   const play = (id) => {
     navigate(movie || home ? `/watch/movie/${id}` : `/watch/tv/${id}`);
   };

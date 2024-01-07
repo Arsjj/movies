@@ -35,7 +35,7 @@ const Home = () => {
 
   async function getMovie(id) {
     const res = await fetch(
-      `${BASE_URL}/movie/ ${id}?${API_KEY}&append_to_response=videos,images,credits`
+      `${BASE_URL}/movie/${id}?${API_KEY}&append_to_response=videos,images,credits`
     );
     const data = await res.json();
     setProfile(data);

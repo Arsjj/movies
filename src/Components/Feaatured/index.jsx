@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Info from "./Info";
 import useMediaType from "../../hooks/useMediaType";
 import { PlayBtn, InfoBtn } from "../buttons";
-import { imgUrl } from "../../Url_s";
+import { originalImgUrl } from "../../Url_s";
 
 import "./index.scss";
 
@@ -31,7 +31,7 @@ function Featured({ res, type }) {
   return (
     <div className="featured">
       <div className="cover"></div>
-      <img width="100%" src={imgUrl + res?.backdrop_path} alt={res?.title} />
+      <img width="100%" src={originalImgUrl + res?.backdrop_path} alt={res?.title} />
       <div className="info">
         <h1>{res?.title || res?.name}</h1>
         <span className="desc">{res?.overview}</span>

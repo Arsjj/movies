@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import Featured from "../../Components/Feaatured";
 
-
 function InfoPage() {
   const [data, setData] = useState();
 
@@ -21,8 +20,6 @@ function InfoPage() {
     fetch(url)
       .then((response) => response.json())
       .then((response) => setData(response));
-
-    console.log(data);
   }, []);
 
   return (

@@ -11,7 +11,6 @@ import StartMembership from "./components/StartMembership";
 
 import "./index.scss";
 
-
 function Mainpage() {
   const [values, setValues] = useState({
     email: "",
@@ -24,7 +23,6 @@ function Mainpage() {
     e.preventDefault();
 
     if (step === "password") {
-      console.log(values, step);
     } else {
       setStep("password");
     }
@@ -38,7 +36,6 @@ function Mainpage() {
     <div className="body">
       <section>
         <div className="cover">
-          {/* <Header /> */}
           <div className="minCover">
             <Block1 />
             <StartMembership

@@ -9,7 +9,6 @@ import "./index.scss";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [value, setValue] = useState("");
-
   const navigate = useNavigate();
 
   const { userObj, loggedIn, setLoggedIn, setUserObj } =
