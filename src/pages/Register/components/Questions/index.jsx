@@ -74,34 +74,44 @@ function Questions() {
 
   return (
     <div className="questions">
-      <div id="questions">
-        <h1>Frequently Asked Questions</h1>
-        <ul>
-          {questions.map((item) => {
-            return (
-              <React.Fragment key={item.number}>
-                <li title={item.number} onClick={(e) => onChangeHandler(e)}>
-                  {item.question}
-                  <span>
-                    {show[item.number] ? (
-                      <box-icon name="x" color="whote"></box-icon>
-                    ) : (
-                      <box-icon name="plus" color="white"></box-icon>
-                    )}
-                  </span>
-                </li>
-                {show[item.number] && (
-                  <div className="answer">
-                    {item?.answer.map((item) => {
-                      return <div key={item.slice(0, 5)}>{item}</div>;
-                    })}
-                  </div>
-                )}
-              </React.Fragment>
-            );
-          })}
-        </ul>
-      </div>
+      <h1>Frequently Asked Questions</h1>
+      <ul>
+        {questions.map((item) => {
+          return (
+            <React.Fragment key={item.number}>
+              <li title={item.number} onClick={(e) => onChangeHandler(e)}>
+                {item.question}
+                <div title={item.number} onClick={(e) => onChangeHandler(e)}>
+                  {show[item.number] ? (
+                    <box-icon
+                      className="box-icon"
+                      name="x"
+                      color="whote"
+                      title={item.number}
+                      onClick={(e) => onChangeHandler(e)}
+                    ></box-icon>
+                  ) : (
+                    <box-icon
+                      className="box-icon"
+                      name="plus"
+                      color="white"
+                      title={item.number}
+                      onClick={(e) => onChangeHandler(e)}
+                    ></box-icon>
+                  )}
+                </div>
+              </li>
+              {show[item.number] && (
+                <div className="answer">
+                  {item?.answer.map((item) => {
+                    return <div key={item.slice(0, 5)}>{item}</div>;
+                  })}
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })}
+      </ul>
     </div>
   );
 }

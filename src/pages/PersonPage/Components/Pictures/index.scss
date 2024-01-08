@@ -13,7 +13,7 @@
   }
 }
 
-@media all and (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .imagesContainer {
     grid-template-columns: auto auto;
     width: 90%;

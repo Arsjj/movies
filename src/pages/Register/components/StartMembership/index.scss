@@ -6,40 +6,59 @@ p {
 }
 
 .form {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 10vh;
   width: 100%;
 
-  .field {
-    height: 60px;
-    width: 450px;
-    float: left;
-    border: none;
-    border-radius: 2px 0 0 2px;
-  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .field::placeholder {
-    padding: 1vw;
-  }
+    .field {
+      height: 62px;
+      width: 450px;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      font-size: 20px;
+    }
 
-  .field:focus {
-    border: none;
-  }
+    .field::placeholder {
+      padding: 1vw;
+    }
 
-  .submit {
-    width: 212px;
-    height: 62px;
-    font-size: 26px;
-    background-color: red;
-    color: rgb(235, 232, 232);
-    border: none;
-    border-radius: 0 2px 2px 0;
+    .field:focus {
+      border: none;
+    }
+
+    .submit {
+      width: 212px;
+      height: 62px;
+      font-size: 26px;
+      background-color: red;
+      color: rgb(235, 232, 232);
+      border: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      transition: all;
+      transition-duration: 0.1s;
+
+      &:hover {
+        background-color: rgb(220, 8, 8);
+      }
+
+      &:active {
+        background-color: rgb(249, 30, 30);
+      }
+    }
   }
 }
 
-@media all and (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .formContainer {
     display: flex;
     flex-direction: column;

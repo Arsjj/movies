@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import useMediaType from "../../../hooks/useMediaType";
 import { PlayBtn } from "../../buttons";
-import { imgUrl } from "../../../Url_s";
+import { originalImgUrl } from "../../../Url_s";
 
 import "./index.scss";
 
@@ -28,7 +28,7 @@ function Info({ data, onClose, type }) {
           <div className="top">
             <img
               className="poster"
-              src={imgUrl + data?.backdrop_path}
+              src={originalImgUrl + data?.backdrop_path}
               alt={data?.name}
             />
             <div className="action">
@@ -72,17 +72,23 @@ function Info({ data, onClose, type }) {
                     "episodes"}
               </div>
               <div>
-                <a href={data?.homepage}>Homepage</a>
+                <a href={data?.homepage} target="_blank">Homepage</a>
               </div>
             </div>
             <div className="right">
-              <div>
-                <span className="genre">Genres:</span>
-                <span className="nameList">
-                  {data?.genres.map((genre) => {
-                    return <span key={genre.name}>{genre.name}</span>;
+              <div className="genreContainer">
+                <div className="genre">Genres:</div>
+                <div className="genreList">
+                  {data?.genres.slice(0, 10).map((credit, id, arr) => {
+                    return (
+                      <p>
+                        {id === arr.length - 1
+                          ? credit.name
+                          : `${credit.name},`}
+                      </p>
+                    );
                   })}
-                </span>
+                </div>
               </div>
               <div>
                 {data?.credits.cast.length ? (
@@ -112,6 +118,14 @@ function Info({ data, onClose, type }) {
                 ) : null}
               </div>
             </div>
+          </div>
+          <div
+            className="icon"
+            onClick={() => {
+              onClose();
+            }}
+          >
+            <i className="bx bx-x bx-sm"></i>
           </div>
         </div>
       </>

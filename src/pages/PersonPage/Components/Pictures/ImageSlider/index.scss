@@ -64,7 +64,7 @@
   }
 }
 
-@media all and (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .slider {
     .slideshow {
       width: 100%;

@@ -102,7 +102,7 @@ function SignUp() {
             </button>
             <span>
               New to Netflix?{" "}
-              <a href="https://www.themoviedb.org/signup">Sign up now</a>
+              <a href="https://www.themoviedb.org/signup" target="_blank">Sign up now</a>
             </span>
             <small>
               This page is protected by Google reCAPCHA to ensure you're not a

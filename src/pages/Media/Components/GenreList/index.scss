@@ -1,35 +1,29 @@
 .genreSelect {
   h3 {
     color: white;
-    margin-bottom: 5px;
+    margin: 0 0 10px 0;
     width: 80px;
   }
 
   .select {
     position: relative;
-    top: 6px;
-    left: 20px;
     font-size: 30px;
   }
-
+  
   .genreContainer {
     background-color: rgb(24, 21, 21);
     color: rgb(236, 231, 224);
-    width: 120px;
-    height: 18px;
+    width: 160px;
     display: flex;
+    border-radius: 5px;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
     padding: 7px;
     font-size: 15px;
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:active{
-      // background-color: rgba(51, 51, 51, 0.16);
-      // background: linear-gradient(rgb(24, 21, 21), rgb(52, 51, 51));
     }
   }
 
@@ -39,19 +33,20 @@
     border-left: 1px solid rgb(83, 81, 81);
     border-right: 1px solid rgb(83, 81, 81);
     border-top: 1px solid rgb(83, 81, 81);
-    margin-top: 0;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
     transition: height 2s;
-    padding-bottom: 7px;
+    width: 160px;
 
     .list {
       display: flex;
       align-items: center;
-      padding-left: 7px;
-      padding-right: 7px;
-      
+      padding: 2px 7px;
+      box-sizing: border-box;
       margin-top: 0;
       margin-right: 0;
-      width: 118px;
+      width: 100%;
       font-size: 14px;
       animation-name: list;
       animation-duration: 0.2s;
@@ -59,26 +54,24 @@
       @keyframes list {
         from {
           opacity: 0.1;
-        };
+        }
         to {
           opacity: 1;
         }
       }
-        
-      
+
       &:hover {
         background: rgb(75, 130, 250);
         cursor: pointer;
       }
     }
 
-      span {
-        position: relative;
-      }
-    }
-
-    .hov:hover {
-      background-color: rgb(54, 144, 229);
+    span {
+      position: relative;
     }
   }
 
+  .hov:hover {
+    background-color: rgb(54, 144, 229);
+  }
+}

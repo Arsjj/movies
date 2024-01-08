@@ -1,8 +1,9 @@
 import React from 'react'
+import './index.scss'
 
 function MyList() {
   return (
-    <div>MyList</div>
+    <div className='div'>MyList</div>
   )
 }
 

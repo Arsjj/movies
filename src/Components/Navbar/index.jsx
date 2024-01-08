@@ -2,9 +2,9 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthContext";
+import MobileNavbar from "./Mobile";
 
 import "./index.scss";
-
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -45,7 +45,10 @@ const Navbar = () => {
       <div className="container">
         <div className="left">
           <Link className="link" to={loggedIn ? "home" : "/"}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="Netflix"/>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158"
+              alt="Netflix"
+            />
           </Link>
           <Link to="/home" className="link">
             Homepage

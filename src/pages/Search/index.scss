@@ -58,7 +58,7 @@
 }
 
 
-@media all and (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .results {
     left: 0;
     top: 120px;

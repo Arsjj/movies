@@ -30,7 +30,7 @@
   }
 }
 
-@media all and (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .buttons {
     width: 70%;
     height: 50px;

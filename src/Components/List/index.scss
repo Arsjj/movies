@@ -11,10 +11,14 @@
     font-style: 20px;
     font-weight: 500;
     margin-left: 50px;
+    position: relative;
+    z-index: -1;
   }
 
   .wrapper {
     position: relative;
+    z-index: -1;
+
 
     .container {
       margin-left: 50px;

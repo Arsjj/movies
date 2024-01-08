@@ -2,7 +2,6 @@ import { useState } from "react";
 import { imgUrl } from "../../../Url_s";
 import "./index.scss";
 
-
 function ListItem({ index, img, title, overview, id, getMovie }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -11,11 +10,8 @@ function ListItem({ index, img, title, overview, id, getMovie }) {
       className="listItem"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
-        left: isHovered && index * 225 - 50 + index * 2.5,
-      }}
     >
-      <img src={imgUrl + img} alt="" />
+      <img src={imgUrl + img} alt={title} />
       {isHovered && (
         <>
           <div
@@ -23,10 +19,9 @@ function ListItem({ index, img, title, overview, id, getMovie }) {
             style={{
               left: isHovered && index * 225 - 5 + index * 2.5,
             }}
-            onClick={(e) => getMovie(e.target.id)}
             ids={id}
           >
-            <img src={imgUrl + img} id={id} alt="" />
+            <img src={imgUrl + img} id={id} alt={title} />
             <div className="itemInfo" id={id}>
               <div className="icons" id={id}>
                 <i className="bx bx-play"></i>
@@ -35,11 +30,13 @@ function ListItem({ index, img, title, overview, id, getMovie }) {
                 <i className="bx bx-dislike"></i>
               </div>
               <div className="itemInfoTop" id={id}>
-                <span>{title}</span>
-                <span className="limit"></span>
-                <span></span>
+                <span id={id} onClick={(e) => getMovie(e.target.id)}>
+                  {title}
+                </span>
               </div>
-              <div className="description" id={id}>{overview.slice(0, 95) + "..."}</div>
+              <div className="description" id={id}>
+                {overview}
+              </div>
               <div className="genre"></div>
             </div>
           </div>
