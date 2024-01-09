@@ -112,6 +112,9 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      <div className="mobile-navbar">
+        <MobileNavbar loggedIn={loggedIn} signOut={signOut}></MobileNavbar>
+      </div>
     </div>
   );
 };

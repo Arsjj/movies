@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./index.scss";
+import { Link } from "react-router-dom";
 
 const navbarLinks = [
   {
@@ -20,32 +21,62 @@ const navbarLinks = [
   },
 ];
 
-const MobileNavbar = () => {
-  // const [active, setActive] = useState(false);
+const MobileNavbar = ({ loggedIn, signOut }) => {
+  const [active, setActive] = useState(false);
+
+  const changeHandler = () => {
+    setActive((prev) => !prev);
+  };
 
   return (
-    <nav className="mobile-container">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Info</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    // <nav className="navigation">
+    <div id="menuToggle">
+      <Link className="link" to={loggedIn ? "home" : "/"}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158"
+          alt="Netflix"
+        />
+      </Link>
+      <input type="checkbox" checked={active} onClick={changeHandler} />
+      <span onClick={changeHandler}></span>
+      <span onClick={changeHandler}></span>
+      <span onClick={changeHandler}></span>
+      <ul id="menu">
+        <li onClick={changeHandler}>
+          <Link to="/home" className="link">
+            Homepage
+          </Link>
+        </li>
+        <li onClick={changeHandler}>
+          <Link to={"/movies"} className="link">
+            Movies
+          </Link>
+        </li>
+        <li onClick={changeHandler}>
+          <Link to="/series" className="link">
+            Series
+          </Link>
+        </li>
+        
+        <li onClick={changeHandler}>
+          {loggedIn ? (
+            <>
+              <Link to="/mylist" className="link">
+                My List
+              </Link>
+            </>
+          ) : (
+            <Link to="/sign-in">Sign-in</Link>
+          )}
+        </li>
+        {loggedIn && <li onClick={changeHandler}>
+          <Link onClick={signOut} className="link">
+            Sign out
+          </Link>
+        </li>}
+      </ul>
+    </div>
+    // </nav>
   );
 };
 
