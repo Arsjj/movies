@@ -21,21 +21,24 @@
       transition: 2s;
 
       .search {
+        position: relative;
         display: flex;
         align-items: center;
         margin-right: 10px;
-      
+
         .input {
           display: flex;
           align-items: center;
-          position: relative;
-      
+          position: absolute;
+          top: -5px;
+          right: 30px;
+
           input {
             width: 270px;
-            padding: 8px 10px;
+            padding: 7px 10px;
             border-radius: 5px;
             font-size: 16px;
-      
+
             &:focus {
               outline: none;
             }
@@ -118,8 +121,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
   .navbar {
     position: absolute;
@@ -138,10 +139,19 @@
       .left {
         display: grid;
       }
+
       .right {
         position: absolute;
         top: 15px;
         right: 15px;
+
+        .search {
+          .input {
+            input {
+              width: 200px;
+            }
+          }
+        }
 
         i {
           margin: 0;
