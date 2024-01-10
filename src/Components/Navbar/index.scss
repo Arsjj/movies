@@ -24,18 +24,18 @@
         display: flex;
         align-items: center;
         margin-right: 10px;
-
+      
         .input {
           display: flex;
           align-items: center;
           position: relative;
-
+      
           input {
             width: 270px;
             padding: 8px 10px;
             border-radius: 5px;
             font-size: 16px;
-
+      
             &:focus {
               outline: none;
             }
@@ -118,6 +118,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 768px) {
   .navbar {
     position: absolute;
@@ -129,7 +131,7 @@
     // overflow-x: hidden;
 
     .container {
-      display: none;
+      display: grid;
       gap: 10px;
       padding: 15px 0 0 12px;
 
@@ -149,8 +151,8 @@
 
     .mobile-navbar {
       display: flex;
+      flex-direction: column;
       width: 100%;
-      // justify-content: flex-end;      
-  }
+    }
   }
 }

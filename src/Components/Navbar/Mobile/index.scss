@@ -17,7 +17,6 @@
   -webkit-user-select: none;
   user-select: none;
 
-
   img {
     position: absolute;
     top: 0;
@@ -27,8 +26,9 @@
   }
 }
 
-#menuToggle input
-{
+
+
+#menuToggle input {
   display: flex;
   width: 40px;
   height: 32px;
@@ -38,8 +38,7 @@
   z-index: 2;
 }
 
-#menuToggle span
-{
+#menuToggle span {
   display: flex;
   width: 29px;
   height: 2px;
@@ -49,63 +48,55 @@
   border-radius: 3px;
   z-index: 5;
   transform-origin: 5px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-3px, -1px);
   // background: ;
 }
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
-{
+#menu {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  box-shadow: 0 0 10px #85888C;
+  box-shadow: 0 0 10px #85888c;
   margin: -50px 0 0 25px;
   padding-top: 125px;
   box-sizing: border-box;
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
   background-color: rgb(33, 30, 30);
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   position: relative;
   right: 25px;
   padding: 10px 0;
@@ -115,9 +106,9 @@
   a {
     text-decoration: none;
     color: aliceblue;
- 
+
     &:hover {
-      color:beige
+      color: beige;
     }
 
     &:active {
@@ -126,7 +117,6 @@
   }
 }
 
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
 }
