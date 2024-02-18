@@ -50,10 +50,10 @@ const Navbar = () => {
           <Link to="/home" className="link">
             Homepage
           </Link>
-          <Link to={"/movies"} className="link">
+          <Link to={"/movies/1"} className="link">
             Movies
           </Link>
-          <Link to="/series" className="link">
+          <Link to="/series/1" className="link">
             Series
           </Link>
           {loggedIn ? (
